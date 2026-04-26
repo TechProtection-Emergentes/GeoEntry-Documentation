@@ -1721,6 +1721,47 @@ Para definir el mapa, el equipo discutió alternativas clave como:
 
 <img src="assets/chapter4/Deployment.png" alt="Deployment">
 
+## Conclusiones y recomendaciones
+
+El desarrollo de la solución **GeoEntry**, impulsado por la startup **TechProtection**, permitió validar de forma efectiva las hipótesis y suposiciones planteadas en el proceso **Lean UX**. A través de la investigación, se identificó que los usuarios, tanto residenciales como comerciales, enfrentan una fuerte fragmentación tecnológica y desean soluciones automatizadas que funcionen de manera fluida, sin requerir múltiples aplicaciones o intervención manual constante.
+
+Las entrevistas y herramientas de análisis (como **User Personas**, **Empathy Mapping**, **User Task Matrix** y **As-is Scenario Mapping**) confirmaron que los usuarios valoran principalmente la comodidad, la eficiencia energética y la seguridad. En ese sentido, GeoEntry resolvió los *Problem Statements* al ofrecer una experiencia de llegada automatizada mediante geolocalización e IoT, eliminando fricciones comunes como la gestión manual de cerraduras, iluminación y climatización.
+
+Los **Hypothesis Statements** fueron validados exitosamente en el ciclo de vida del proyecto:
+*   **Interés en automatización por proximidad:** Se evidenció un interés real, con resultados que muestran que el 70% de los usuarios configurarían estas automatizaciones en sus primeros 30 días.
+*   **Reducción de tareas manuales:** Se logró proyectar una reducción significativa, alcanzando un 60% de acciones ejecutadas de forma autónoma por el sistema.
+*   **Adopción tecnológica:** La interfaz intuitiva fue bien aceptada, superando el 85% de éxito en la configuración inicial y manteniendo un bajo índice de abandono.
+
+En base a los resultados obtenidos, el equipo recomienda:
+1.  **Roadmap Iterativo:** Priorizar la integración con protocolos estándar como **Matter** y ecosistemas mayores (Alexa, Google Home, Apple HomeKit), además de mejorar la personalización de escenarios y la visualización de datos analíticos.
+2.  **Validación Comercial:** Expandir el alcance hacia sectores B2B como **hotelería boutique, coworking y espacios de bienestar**, mediante pilotos que permitan adaptar la solución a sus necesidades operativas específicas.
+3.  **Estrategias de Posicionamiento:** Fortalecer la presencia en el mercado mediante alianzas con inmobiliarias, arquitectos y showrooms, junto con campañas de marketing enfocadas en los beneficios de comodidad y ahorro energético.
+4.  **Optimización Técnica:** Mejorar la eficiencia de los algoritmos de detección de presencia, optimizar el consumo energético de los dispositivos ESP32 y asegurar la robustez del sistema en modo offline.
+5.  **Escalabilidad y Soporte:** Diseñar una infraestructura que soporte un crecimiento en el número de usuarios sin degradar el rendimiento, e implementar canales de soporte técnico accesibles para facilitar la adopción por usuarios principiantes.
+
+GeoEntry se consolida como una propuesta de alto valor con potencial para convertirse en referente regional en automatización inteligente. La validación del modelo de negocio y el enfoque centrado en el usuario posicionan al proyecto en una ruta prometedora de crecimiento.
+
+## Bibliografía
+
+Bruton, L. (2022, 13 de junio). What is lean UX and why does it matter? A complete guide. UX Design Institute. Recuperado de https://www.uxdesigninstitute.com/blog/what-is-lean-ux/
+
+Idento. (s.f.). Lean UX: ¿Qué es? Fases y Metodología | Guía 2025. Recuperado de https://www.idento.es/blog/desarrollo-web/lean-ux-que-es/
+
+Mordor Intelligence. (s.f.). Tamaño del mercado de hogares inteligentes en América Latina. Recuperado el 25 de abril de 2025 de https://www.mordorintelligence.ar/industry-reports/latin-america-smart-home-market
+
+Ramírez, L. (2023, 26 de enero). Lean UX: ¿Qué es, principios, y cómo implementarlo? IEBS Business School. Recuperado de https://www.iebschool.com/hub/lean-ux-que-es-principios-como-implementarlo-analitica-usabilidad/
+
+Statista. (2023). Global smart home market revenue 2016–2022. Recuperado de https://www.statista.com/statistics/682204/global-smart-home-market-size/
+
+## Anexos
+
+### Anexo A: [Nombre del Anexo]
+[Contenido o referencia al anexo]
+
+### Anexo B: [Nombre del Anexo]
+[Contenido o referencia al anexo]
+
+
 
 
 
