@@ -1621,27 +1621,27 @@ El **EventStorming** nos ayudó a visualizar el flujo completo de eventos, ident
 
 <img src="assets/chapter4/GeoEntry - EventStorming.jpg" alt="EventStorming">
 
-[Enlace al EventStorming](https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497)
+[Anexo A:](https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497)
 
 
 #### 4.2.2.	Candidate Context Discovery.
 
 <img src="assets/chapter4/GeoEntry - Candidate Context Discovery.jpg" alt="Candidate-Contexts">
 
-[Enlace al Candidate Context Discovery](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14)
+[Anexo B:](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14)
 
 
 #### 4.2.3.	Domain Message Flows Modeling.
 
 <img src="assets/chapter4/GeoEntry - Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling">
 
-[Enlace al Domain Message Flows Modeling](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14)
+[Anexo C:](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14)
 
 #### 4.2.4.	Bounded Context Canvases.
 
 <img src="assets/chapter4/GeoEntry - Bounded Context Canvases.jpg" alt="Bounded Context Canvases">
 
-[Enlace al Bounded Context Canvases](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14)
+[Anexo D:](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14)
 
 #### 4.2.5.	Context Mapping.
 
@@ -1755,11 +1755,22 @@ Statista. (2023). Global smart home market revenue 2016–2022. Recuperado de ht
 
 ## Anexos
 
-### Anexo A: [Nombre del Anexo]
-[Contenido o referencia al anexo]
+### Anexo A: EVENT STORMING:
 
-### Anexo B: [Nombre del Anexo]
-[Contenido o referencia al anexo]
+[https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497](https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497)
+
+### Anexo B: CANDIDATE CONTEXT DISCOVERY:
+
+[https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14)
+
+### Anexo C: DOMAIN MESSAGE FLOW MODELING:
+
+[https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14)
+
+### Anexo D: BOUNDED CONTEXT CANVASES:
+
+[https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14)
+
 
 
 
