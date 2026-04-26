@@ -853,6 +853,43 @@ Factores técnicos y de negocio que limitan las opciones de diseño.
 
 #### 4.1.3.	Architectural Drivers Backlog.
 
+Priorización de los factores que más impactan en la complejidad técnica.
+
+<table class="drivers">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título de Driver</th>
+      <th>Descripción</th>
+      <th>Importancia Stakeholders</th>
+      <th>Impacto en Arquitectura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D1</td>
+      <td>Inferencia Local (Ollama)</td>
+      <td>Procesamiento de IA sin costos de tokens y con privacidad total.</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>D2</td>
+      <td>SoC de Seguridad</td>
+      <td>Aislamiento de la lógica de cerradura para evitar efectos colaterales.</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>D3</td>
+      <td>Comunicación Edge/IoT</td>
+      <td>Gestión de telemetría y comandos en tiempo real con ESP32.</td>
+      <td>Medium</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.1.4.	Architectural Design Decisions.
 
 #### 4.1.5.	Quality Attribute Scenario Refinements.
