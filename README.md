@@ -708,6 +708,381 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 ### 3.2.	User Stories.
 
+#### Épicas
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Epic / User Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EP01</td>
+      <td>Autonomía del Hogar Inteligente</td>
+      <td>Como usuario, quiero que mi hogar detecte mi presencia y ejecute acciones automáticamente (desbloquear cerradura, encender luces, ajustar clima), para vivir una experiencia completamente manos libres.</td>
+    </tr>
+    <tr>
+      <td>EP02</td>
+      <td>Gestión de Dispositivos</td>
+      <td>Como usuario, quiero agregar, configurar, monitorear y controlar mis dispositivos inteligentes (luces, termostatos, cerraduras, sensores ESP32) desde una única interfaz, para gestionar mi hogar de manera centralizada y en tiempo real.</td>
+    </tr>
+    <tr>
+      <td>EP03</td>
+      <td>Inteligencia y Aprendizaje Adaptativo</td>
+      <td>Como usuario, quiero que el sistema aprenda mis patrones de comportamiento y se anticipe a mis necesidades sin intervención manual, para optimizar el confort y la eficiencia energética de mi hogar.</td>
+    </tr>
+    <tr>
+      <td>EP04</td>
+      <td>Seguridad y Control de Acceso</td>
+      <td>Como administrador del hogar, quiero gestionar quién accede a mi hogar y a qué dispositivos, con alertas automáticas ante accesos no autorizados, para mantener la seguridad de mi familia y mis espacios.</td>
+    </tr>
+    <tr>
+      <td>EP05</td>
+      <td>Monitoreo, Reportes y Analíticas</td>
+      <td>Como usuario, quiero acceder a registros de actividad, reportes de consumo energético y analíticas de patrones de uso, para tomar decisiones informadas sobre el uso de mis dispositivos.</td>
+    </tr>
+    <tr>
+      <td>EP06</td>
+      <td>Configuración y Soporte</td>
+      <td>Como usuario, quiero acceder a opciones de configuración global (idioma, notificaciones, geocercas) y canales de soporte técnico, para personalizar la experiencia y resolver problemas rápidamente.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### User Stories
+
+<table>
+  <thead>
+    <tr>
+      <th>Epic / User Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con (Epic ID)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>US01</td>
+      <td>Automatización por proximidad</td>
+      <td>Como usuario residencial, quiero que mi hogar detecte mi llegada para que se desbloquee la cerradura y se preparen los dispositivos automáticamente, para tener mi hogar listo sin ninguna acción manual.</td>
+      <td>
+        <strong>E1:</strong> Si entra al radio (100m), emite <code>user.entered</code>, abre cerradura y activa dispositivos en &lt; 2s.<br>
+        <strong>E2:</strong> Si el ESP32 no responde, notifica error de conexión.<br>
+        <strong>E3:</strong> Si se aleja > 200m por 5 min, activa modo Ausencia y bloquea cerradura.
+      </td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>US02</td>
+      <td>Control manual en tiempo real</td>
+      <td>Como usuario, quiero activar o desactivar dispositivos manualmente desde la app móvil, para tener control total cuando lo desee.</td>
+      <td>
+        <strong>E1:</strong> Respuesta del dispositivo en &lt; 500ms tras comando.<br>
+        <strong>E2:</strong> Si no hay red, muestra "Dispositivo sin conexión".<br>
+        <strong>E3:</strong> Lista visual con nombre, ubicación y estado On/Off real.
+      </td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>US03</td>
+      <td>Aprendizaje de hábitos</td>
+      <td>Como usuario, quiero que el sistema aprenda mis horarios de uso de luces y AC, para que se anticipe a mis necesidades sin reglas manuales.</td>
+      <td>
+        <strong>E1:</strong> Tras 7 días de rutina, el proceso batch nocturno genera sugerencias de automatización.<br>
+        <strong>E2:</strong> Con &lt; 3 días de uso, informa que requiere más datos.<br>
+        <strong>E3:</strong> Ejecución automática si la confianza del modelo es alta, notificando al usuario.
+      </td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>US04</td>
+      <td>Recibir alerta al llegar</td>
+      <td>Como usuario, quiero que la app me notifique al acercarme a mi ubicación configurada, para tener un registro de detección.</td>
+      <td>
+        <strong>E1:</strong> Notificación push "¡Bienvenido a Casa!" a los 30m.<br>
+        <strong>E2:</strong> Si la precisión GPS es > 300m, notifica baja señal.
+      </td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>US05</td>
+      <td>Recibir alerta al salir</td>
+      <td>Como usuario, quiero ser notificado cuando salga de mi zona configurada, para confirmar la activación del modo Ausencia.</td>
+      <td>
+        <strong>E1:</strong> Notificación de salida al alejarse > 20m.<br>
+        <strong>E2:</strong> Espera de 2 min ante fluctuaciones en el límite de zona antes de confirmar.
+      </td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>US06</td>
+      <td>Agregar dispositivo</td>
+      <td>Como usuario, quiero agregar un dispositivo desde la app para comenzar a controlar mi hogar inteligente.</td>
+      <td>
+        <strong>E1:</strong> Registro exitoso y visualización inmediata en la lista.<br>
+        <strong>E2:</strong> Si ya está vinculado a otra cuenta, bloquea y sugiere soporte.
+      </td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>US07</td>
+      <td>Desconectar dispositivo</td>
+      <td>Como usuario, quiero remover dispositivos que ya no uso para mantener mi lista organizada.</td>
+      <td>
+        <strong>E1:</strong> Eliminación y remoción inmediata del dashboard.<br>
+        <strong>E2:</strong> Bloquea eliminación si el dispositivo está en una rutina activa.
+      </td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>US08</td>
+      <td>Invitar a un familiar</td>
+      <td>Como administrador, quiero compartir acceso con un familiar con permisos específicos para un control seguro.</td>
+      <td>
+        <strong>E1:</strong> Envío de enlace de activación por email tras asignar permisos.<br>
+        <strong>E2:</strong> Bloqueo de invitación si se alcanza el límite del plan.
+      </td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>US09</td>
+      <td>Revocar acceso</td>
+      <td>Como administrador, quiero retirar permisos a usuarios invitados para mantener la seguridad.</td>
+      <td>
+        <strong>E1:</strong> Pérdida de acceso inmediata tras confirmar revocación.<br>
+        <strong>E2:</strong> El administrador principal no puede revocarse a sí mismo.
+      </td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>US10</td>
+      <td>Ver historial de actividad</td>
+      <td>Como usuario, quiero revisar las actividades recientes de mis dispositivos para monitorear el sistema.</td>
+      <td>
+        <strong>E1:</strong> Lista con fecha, hora y acción del evento seleccionado.<br>
+        <strong>E2:</strong> Filtros funcionales por tipo (ej: Alertas).<br>
+        <strong>E3:</strong> Mensaje informativo si no hay registros en el periodo.
+      </td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>US11</td>
+      <td>Visualizar analíticas</td>
+      <td>Como usuario, quiero visualizar analíticas de patrones de ubicación y actividad para ver insights de comportamiento.</td>
+      <td>
+        <strong>E1:</strong> Gráficos de horas pico y uso por dispositivo disponibles.<br>
+        <strong>E2:</strong> Notificación de "Datos insuficientes" si el uso es &lt; 3 días.
+      </td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>US12</td>
+      <td>Visualizar ubicaciones</td>
+      <td>Como usuario, quiero ver mis ubicaciones en lista y mapa para asegurar que los radios son correctos.</td>
+      <td>
+        <strong>E1:</strong> Lista detallada con nombre y radio (ej: 100m).<br>
+        <strong>E2:</strong> Marcadores personalizados visibles en mapa.<br>
+        <strong>E3:</strong> Edición de geocerca entre 50m y 500m con reflejo inmediato.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US13</td>
+      <td>Resumen general (Dashboard)</td>
+      <td>Como usuario, quiero un resumen consolidado de ubicaciones, dispositivos y eventos para una visión rápida.</td>
+      <td>
+        <strong>E1:</strong> Carga de dashboard con estados activos y eventos recientes.<br>
+        <strong>E2:</strong> Botón de reintento ante errores de carga del servidor.
+      </td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>US14</td>
+      <td>Cambiar idioma</td>
+      <td>Como usuario, quiero seleccionar el idioma de la interfaz (ES/EN) para mayor comodidad.</td>
+      <td>
+        <strong>E1:</strong> Traducción inmediata de la interfaz tras selección.<br>
+        <strong>E2:</strong> Reversión al idioma anterior si el seleccionado no es soportado.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US15</td>
+      <td>Contactar soporte</td>
+      <td>Como usuario, quiero enviar tickets de soporte desde la app para resolver problemas técnicos.</td>
+      <td>
+        <strong>E1:</strong> Confirmación visual y recepción de email con número de ticket.<br>
+        <strong>E2:</strong> Validación de campos obligatorios y formato de email.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US16</td>
+      <td>Editar perfil</td>
+      <td>Como usuario, quiero editar mi nombre y foto de avatar para personalizar mi cuenta.</td>
+      <td>
+        <strong>E1:</strong> Actualización global de imagen (JPG/PNG).<br>
+        <strong>E2:</strong> Restricción de tamaño de archivo a un máximo de 2MB.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US17</td>
+      <td>Redirección desde Landing</td>
+      <td>Como visitante, quiero que el botón "Solicitar Demo" me lleve al login para probar la app.</td>
+      <td>
+        <strong>E1:</strong> Redirección exitosa a la página de inicio de sesión.<br>
+        <strong>E2:</strong> El botón "Saber más" dirige a la sección de Características.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US18</td>
+      <td>Registro de nuevo usuario</td>
+      <td>Como usuario interesado, quiero crear una cuenta en GeoEntry proporcionando mis datos básicos, para empezar a configurar mi hogar inteligente.</td>
+      <td>
+        <strong>E1:</strong> Registro exitoso mediante email y contraseña con validación de formato.<br>
+        <strong>E2:</strong> El sistema impide el registro si el email ya existe en la base de datos.<br>
+        <strong>E3:</strong> Envío automático de correo de bienvenida tras la creación de la cuenta.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US19</td>
+      <td>Inicio de sesión (Login)</td>
+      <td>Como usuario registrado, quiero ingresar a mi cuenta de forma segura, para gestionar mis dispositivos y ubicaciones.</td>
+      <td>
+        <strong>E1:</strong> Autenticación exitosa que genera un token JWT para persistencia de sesión.<br>
+        <strong>E2:</strong> Notificación de "Credenciales incorrectas" ante datos inválidos.<br>
+        <strong>E3:</strong> Opción de "Mantener sesión iniciada" para evitar logueos constantes.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US20</td>
+      <td>Recuperación de contraseña</td>
+      <td>Como usuario, quiero restablecer mi contraseña en caso de olvidarla, para no perder el acceso a mi cuenta.</td>
+      <td>
+        <strong>E1:</strong> Envío de enlace temporal de recuperación al email registrado.<br>
+        <strong>E2:</strong> El enlace expira tras 1 hora por motivos de seguridad.<br>
+        <strong>E3:</strong> Confirmación visual tras el cambio exitoso de la clave.
+      </td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>US21</td>
+      <td>Cierre de sesión (Logout)</td>
+      <td>Como usuario, quiero cerrar mi sesión de forma segura, para proteger mi información en dispositivos compartidos.</td>
+      <td>
+        <strong>E1:</strong> Invalidación inmediata del token de acceso al confirmar la salida.<br>
+        <strong>E2:</strong> Redirección automática a la pantalla de login tras cerrar sesión.
+      </td>
+      <td>EP06</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Technical Stories
+
+<table>
+  <thead>
+    <tr>
+      <th>Epic / User Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con (Epic ID)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TS01</td>
+      <td>POST /api/devices</td>
+      <td>Como desarrollador, quiero implementar el endpoint para registrar nuevos dispositivos, para permitir que el sistema almacene y gestione dispositivos ESP32 y otros dispositivos inteligentes.</td>
+      <td>
+        <strong>E1:</strong> Recibe JSON válido, responde 201 Created y el ID del dispositivo.<br>
+        <strong>E2:</strong> Si falta el campo 'type', responde 400 Bad Request y mensaje de error.
+      </td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS02</td>
+      <td>GET /api/devices/{device_id}</td>
+      <td>Como desarrollador, quiero implementar el endpoint para obtener los detalles de un dispositivo específico, para que la app pueda mostrar el estado actualizado en tiempo real.</td>
+      <td>
+        <strong>E1:</strong> Con ID válido, responde 200 OK y datos completos del dispositivo.<br>
+        <strong>E2:</strong> Si el ID no existe, responde 404 Not Found.
+      </td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS03</td>
+      <td>PUT /api/routines/{routine_id}</td>
+      <td>Como desarrollador, quiero implementar el endpoint para actualizar una rutina de automatización existente, para que el AI Service pueda modificar reglas basadas en patrones aprendidos.</td>
+      <td>
+        <strong>E1:</strong> Actualización exitosa con JSON válido responde 200 OK.<br>
+        <strong>E2:</strong> Si la rutina no existe, responde 404 Not Found.
+      </td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>TS04</td>
+      <td>DELETE /api/access-codes/{code}</td>
+      <td>Como desarrollador, quiero implementar el endpoint para eliminar códigos de acceso temporales, para revocar accesos expirados o innecesarios.</td>
+      <td>
+        <strong>E1:</strong> Código válido es desactivado y responde 200 OK.<br>
+        <strong>E2:</strong> Si el código es inválido o ya expiró, responde 404 Not Found.
+      </td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>TS05</td>
+      <td>POST /api/notifications</td>
+      <td>Como desarrollador, quiero implementar el endpoint para enviar notificaciones push, para que los servicios de proximidad, seguridad e IA puedan despachar alertas.</td>
+      <td>
+        <strong>E1:</strong> Envío correcto al canal del usuario responde 202 Accepted.<br>
+        <strong>E2:</strong> Si el user_id no existe, responde 404 Not Found.
+      </td>
+      <td>EP04, EP06</td>
+    </tr>
+    <tr>
+      <td>TS06</td>
+      <td>POST /api/proximity/events</td>
+      <td>Como desarrollador, quiero implementar el endpoint para recibir y publicar eventos de proximidad desde sensores ESP32, para emitir eventos user.entered/exited.</td>
+      <td>
+        <strong>E1:</strong> Procesa "arrived", publica user.entered y responde 200 OK en &lt; 2s.<br>
+        <strong>E2:</strong> Procesa "departed", activa modo Ausencia y responde 200 OK.<br>
+        <strong>E3:</strong> Payload sin campo 'event' responde 400 Bad Request.
+      </td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>TS07</td>
+      <td>POST /api/ai/train</td>
+      <td>Como desarrollador, quiero implementar el endpoint para iniciar el proceso batch nocturno de reentrenamiento, para actualizar los patrones de comportamiento de los usuarios.</td>
+      <td>
+        <strong>E1:</strong> Ejecución por scheduler responde 202 Accepted con el ID del job.<br>
+        <strong>E2:</strong> Con &lt; 3 días de historial, omite el entrenamiento y registra el motivo en logs.
+      </td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>TS08</td>
+      <td>GET /api/ai/suggestions/{user_id}</td>
+      <td>Como desarrollador, quiero implementar el endpoint para obtener sugerencias de automatización generadas por la IA, para que el usuario pueda aprobarlas o rechazarlas.</td>
+      <td>
+        <strong>E1:</strong> Responde 200 OK con lista de sugerencias y niveles de confianza.<br>
+        <strong>E2:</strong> Si no hay sugerencias generadas, responde 200 OK con lista vacía [].
+      </td>
+      <td>EP03</td>
+    </tr>
+  </tbody>
+</table>
+
 ### 3.3.	Impact Mapping.
 
 ### 3.4.	Product Backlog.
