@@ -245,6 +245,12 @@ Sabremos que hemos tenido éxito
 
 #### 1.2.2.4. Lean UX Canvas.
 
+
+<img src="assets/Lean_UX_Canvas.png"
+     alt="Lean UX Canvas"
+     >
+  
+
 #### 1.3. Segmentos objetivo.
 
 El sistema GeoEntry está dirigido a usuarios que buscan mejorar la gestión de sus espacios mediante automatización inteligente basada en IoT e Inteligencia Artificial. Se identifican dos segmentos principales:
