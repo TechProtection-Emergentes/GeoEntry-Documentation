@@ -103,6 +103,8 @@
 
 ## Report Collaboration Insights
 
+<img src="assets/Insights.png">
+
 ## Contenido
 ### Tabla de contenidos
 
