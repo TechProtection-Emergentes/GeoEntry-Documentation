@@ -23,26 +23,46 @@
 
 **Nombre del producto: GeoEntry**
 
-
-| Integrante                              | Código       |
-|-----------------------------------------|--------------|
-| Agama Espinoza, Eric Fabrizio       |  U202213358  |
-|  López Huamán, Rodrigo Adrián        |  U202212338  |
-|   Salon Puerta, Merly            | U20201b772   |
-| Vera Nuñez, Nicolas Alejandro            | U202214869   |
-|  Salvador Rodríguez, Rodrigo Jesús   |  U202213646   |
+<section class="members-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Integrante</th>
+        <th>Codigo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Eric Agama Espinoza</td>
+        <td>U202213358</td>
+      </tr>
+      <tr>
+        <td>Rodrigo Adrián López Huamán</td>
+        <td>U202212338</td>
+      </tr>
+      <tr>
+        <td>Merly Salon Puerta</td>
+        <td>U20201b772</td>
+      </tr>
+      <tr>
+        <td>Nicolas Alejandro Vera Nuñez</td>
+        <td>U202214869</td>
+      </tr>
+      <tr>
+        <td>Rodrigo Jesús Salvador Rodríguez</td>
+        <td>U202213646</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
 <div align="center"><h3>Abril 2026</h3></div><br>
 
 </div>
 
----
-
-### Registro de Versiones
+## Registro de Versiones
 
 <section class="version-section">
-  <h2>Historial de Versiones</h2>
-
   <table>
     <thead>
       <tr>
@@ -81,19 +101,19 @@
   </table>
 </section>
 
-### Report Collaboration Insights
+## Report Collaboration Insights
 
-### Contenido
-Tabla de contenidos
+## Contenido
+### Tabla de contenidos
 
 
-### Student Outcome 
+## Student Outcome 
 
-### Capítulo I: Introducción
+## Capítulo I: Introducción
 
-#### 1.1 Startup Profile
+### 1.1 Startup Profile
 
-#### 1.1.1. Descripción de la Startup
+### 1.1.1. Descripción de la Startup
 
 La startup TechProtection surge con el objetivo de transformar la interacción entre las personas y sus espacios mediante el uso de tecnologías emergentes como el Internet de las Cosas (IoT) y la Inteligencia Artificial (IA). En un contexto donde los sistemas de automatización del hogar aún presentan altos niveles de fragmentación y requieren intervención manual constante, TechProtection propone una solución integral, inteligente y adaptativa.
 
@@ -109,7 +129,7 @@ Desarrollar soluciones inteligentes basadas en IoT e Inteligencia Artificial que
 Visión:
  Convertirse en una startup líder en soluciones de automatización inteligente en Latinoamérica, destacando por su innovación, adaptabilidad y enfoque centrado en el usuario.
 
-#### 1.1.2. Perfiles de integrantes del equipo
+### 1.1.2. Perfiles de integrantes del equipo
 
 <section class="team-section">
   <h2>Miembros</h2>
@@ -157,7 +177,7 @@ Visión:
   </table>
 </section>
 
-#### 1.2. Solution Profile
+### 1.2. Solution Profile
 
 #### 1.2.1 Antecedentes y problemática
 
@@ -174,10 +194,10 @@ Como consecuencia, los usuarios enfrentan:
 
 Frente a este contexto, surge la necesidad de desarrollar una solución que no solo automatice tareas, sino que sea capaz de aprender, predecir y adaptarse al comportamiento del usuario, integrando múltiples dispositivos en un sistema único e inteligente.
 
-#### 1.2. Lean UX Process.
+#### 1.2.2 Lean UX Process.
 
 
-#### 1.2.2.1.      Lean UX Problem Statements.
+##### 1.2.2.1.      Lean UX Problem Statements.
 
 El propósito de GeoEntry es ofrecer una experiencia de automatización inteligente que reduzca la intervención manual del usuario y optimice la gestión del hogar mediante el uso de IoT e Inteligencia Artificial.
 
@@ -186,7 +206,7 @@ El problema actual radica en que los sistemas de domótica existentes presentan 
 ¿Cómo podríamos desarrollar un sistema de automatización del hogar que integre múltiples dispositivos y sea capaz de aprender del comportamiento del usuario para anticipar sus necesidades sin intervención manual?
 
 
-#### 1.2.2.2. Lean UX Assumptions.
+##### 1.2.2.2. Lean UX Assumptions.
 
 Business Assumptions
 
@@ -210,7 +230,7 @@ Feature Assumptions
 - Debe ser fácil de configurar y usar. 
 
 
-#### 1.2.2.3. Lean UX Hypothesis Statements.
+##### 1.2.2.3. Lean UX Hypothesis Statements.
 
 **Hypothesis Statement 1:**
 
@@ -243,7 +263,7 @@ Sabremos que hemos tenido éxito
  Cuando al menos el 85% de los usuarios completen correctamente la configuración inicial del sistema y el índice de abandono en la primera semana sea menor al 15%.
 
 
-#### 1.2.2.4. Lean UX Canvas.
+##### 1.2.2.4. Lean UX Canvas.
 
 
 <img src="assets/Lean_UX_Canvas.png"
@@ -251,7 +271,7 @@ Sabremos que hemos tenido éxito
      >
   
 
-#### 1.3. Segmentos objetivo.
+### 1.3. Segmentos objetivo.
 
 El sistema GeoEntry está dirigido a usuarios que buscan mejorar la gestión de sus espacios mediante automatización inteligente basada en IoT e Inteligencia Artificial. Se identifican dos segmentos principales:
 
