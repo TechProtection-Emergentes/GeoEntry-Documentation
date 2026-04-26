@@ -683,6 +683,13 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 |Escalabilidad del Sistema|Capacidad de GeoEntry para expandirse mediante la incorporación de nuevos dispositivos, funcionalidades o espacios, manteniendo un rendimiento óptimo.|
 |Interoperabilidad|Habilidad del sistema para funcionar de manera fluida con múltiples dispositivos, protocolos y plataformas externas, garantizando una experiencia integrada.|
 
+## 3.1.	To-Be Scenario Mapping.
+
+## 3.2.	User Stories.
+
+## 3.3.	Impact Mapping.
+
+## 3.4.	Product Backlog.
 
 
 
