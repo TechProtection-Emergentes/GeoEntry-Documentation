@@ -983,6 +983,16 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
       </td>
       <td>EP06</td>
     </tr>
+    <tr>
+      <td>US22</td>
+      <td>Configuración de geocerca inicial</td>
+      <td>Como usuario, quiero definir el radio de mi hogar en el mapa para que el sistema sepa exactamente cuándo activar la automatización.</td>
+      <td>
+        <strong>E1:</strong> El usuario puede marcar un punto central en el mapa.<br>
+        <strong>E2:</strong> El sistema permite definir un radio (ej: 100m) y guardarlo como "Hogar".
+      </td>
+      <td>EP06</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1086,6 +1096,174 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 ### 3.3.	Impact Mapping.
 
 ### 3.4.	Product Backlog.
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Orden</th>
+      <th>User Story Id</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Story Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>US17</td>
+      <td>Redirección desde Landing Page</td>
+      <td>Como usuario visitante de GeoEntry, quiero hacer clic en el botón "Solicitar Demo" en la landing page para ser redirigido al login y acceder a la demo.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>US01</td>
+      <td>Automatización por proximidad</td>
+      <td>Como usuario residencial, quiero que mi hogar detecte mi llegada para que se desbloquee la cerradura y se preparen los dispositivos automáticamente.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>US22</td>
+      <td>Configuración de geocerca inicial</td>
+      <td>Como usuario, quiero definir el radio de mi hogar en el mapa para que el sistema sepa exactamente cuándo activar la automatización.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>US03</td>
+      <td>Aprendizaje de hábitos</td>
+      <td>Como usuario, quiero que el sistema aprenda mis horarios de uso de luces y AC para que se anticipe a mis necesidades.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>US02</td>
+      <td>Control manual en tiempo real</td>
+      <td>Como usuario, quiero activar o desactivar dispositivos manualmente desde la app móvil para tener control total cuando lo desee.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>US06</td>
+      <td>Agregar dispositivo al sistema</td>
+      <td>Como usuario nuevo de GeoEntry, quiero agregar un dispositivo desde la sección "Dispositivos" para comenzar a controlar mi hogar inteligente.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>US13</td>
+      <td>Resumen general del sistema</td>
+      <td>Como usuario, quiero visualizar un resumen consolidado de mis ubicaciones, dispositivos y eventos recientes para obtener una visión rápida del estado actual de mi cuenta.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>US04</td>
+      <td>Recibir alerta al llegar a ubicación</td>
+      <td>Como usuario, quiero que la aplicación me notifique al acercarme a mi ubicación configurada para tener un registro de mi actividad.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>US05</td>
+      <td>Recibir alerta al salir de ubicación</td>
+      <td>Como usuario, quiero ser notificado cuando salga de mi zona configurada para confirmar que el modo Ausencia se activó.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>US11</td>
+      <td>Visualizar analíticas de patrones</td>
+      <td>Como usuario, quiero visualizar analíticas sobre patrones de ubicación y actividad para obtener una visión clara del comportamiento registrado por el sistema.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>US12</td>
+      <td>Visualizar ubicaciones configuradas</td>
+      <td>Como usuario, quiero ver mis ubicaciones configuradas en lista y en mapa para consultarlas y asegurarme de que sus radios están correctamente registrados.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>US10</td>
+      <td>Ver historial de actividad</td>
+      <td>Como usuario, quiero revisar todas las actividades recientes de mis dispositivos para monitorear el funcionamiento del sistema.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>US08</td>
+      <td>Invitar a un familiar</td>
+      <td>Como administrador del hogar, quiero compartir acceso con un familiar y asignarle permisos específicos para que controle dispositivos determinados de manera segura.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>US09</td>
+      <td>Revocar acceso a un usuario invitado</td>
+      <td>Como administrador del hogar, quiero retirar permisos a usuarios invitados cuando ya no los necesiten para mantener la seguridad de mi hogar.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>US18</td>
+      <td>Registro de nuevo usuario</td>
+      <td>Como usuario interesado, quiero crear una cuenta en GeoEntry proporcionando mis datos básicos, para empezar a configurar mi hogar inteligente.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>US19</td>
+      <td>Inicio de sesión (Login)</td>
+      <td>Como usuario registrado, quiero ingresar a mi cuenta de forma segura, para gestionar mis dispositivos y ubicaciones.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>US20</td>
+      <td>Recuperación de contraseña</td>
+      <td>Como usuario, quiero restablecer mi contraseña en caso de olvidarla, para no perder el acceso a mi cuenta.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>US07</td>
+      <td>Desconectar un dispositivo</td>
+      <td>Como usuario, quiero remover dispositivos que ya no uso de mi sistema para mantener mi lista organizada.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>US16</td>
+      <td>Editar perfil de usuario</td>
+      <td>Como usuario, quiero editar mi información de perfil, incluyendo nombre y foto de avatar, para personalizar mi cuenta en GeoEntry.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>US14</td>
+      <td>Cambiar idioma de la app</td>
+      <td>Como usuario, quiero seleccionar el idioma de la interfaz (español/inglés) para mayor comodidad al usar la aplicación.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>US15</td>
+      <td>Contactar al equipo de soporte</td>
+      <td>Como usuario de GeoEntry, quiero enviar un mensaje o ticket al equipo de soporte desde la app para resolver problemas técnicos sin salir de la aplicación.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>US21</td>
+      <td>Cierre de sesión (Logout)</td>
+      <td>Como usuario, quiero cerrar mi sesión de forma segura, para proteger mi información en dispositivos compartidos.</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Capítulo IV: Strategic-Level Software Design.
 
