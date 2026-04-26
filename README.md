@@ -719,41 +719,443 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 #### 4.1.1.	Design Purpose.
 
+El propósito del diseño es establecer una arquitectura escalable y segura para una plataforma inteligente de automatización del hogar que elimine la intervención manual mediante el uso de geofencing e IA. Se busca satisfacer la necesidad de los usuarios residenciales de tener un hogar autónomo y de los negocios de gestionar múltiples sedes de forma centralizada. El diseño prioriza la privacidad de los datos mediante el procesamiento de patrones de comportamiento de forma local.
+
 #### 4.1.2.	Attribute-Driven Design Inputs.
+
+El proceso de diseño se nutre de requisitos funcionales críticos, atributos de calidad exigentes y restricciones técnicas innegociables.
+
 
 ##### 4.1.2.1.	Primary Functionality (Primary User Stories).
 
+Se han seleccionado las historias de usuario que definen el comportamiento central del sistema y dictan la necesidad de microservicios especializados.
+
+<table class="primary-functionality-section">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>US01</td>
+      <td>Automatización por proximidad</td>
+      <td>Como usuario residencial, quiero que mi hogar detecte mi llegada para que se desbloquee la cerradura y se preparen los dispositivos automáticamente.</td>
+      <td>El sistema debe emitir eventos <code>user.entered</code> y ejecutar acciones en menos de 2 segundos.</td>
+      <td>EPIC-01 (Autonomía)</td>
+    </tr>
+    <tr>
+      <td>US02</td>
+      <td>Control manual en tiempo real</td>
+      <td>Como usuario, quiero activar o desactivar dispositivos manualmente desde la app móvil para tener control total cuando lo desee.</td>
+      <td>La latencia entre el comando en la app y la respuesta del ESP32 no debe superar los 500ms.</td>
+      <td>EPIC-02 (Gestión)</td>
+    </tr>
+    <tr>
+      <td>US03</td>
+      <td>Aprendizaje de hábitos</td>
+      <td>Como usuario, quiero que el sistema aprenda mis horarios de uso de luces y AC para que se anticipe a mis necesidades.</td>
+      <td>El AI Service debe actualizar los modelos de patrones cada noche en un proceso batch.</td>
+      <td>EPIC-03 (Inteligencia)</td>
+    </tr>
+  </tbody>
+</table>
+
 ##### 4.1.2.2.	Quality attribute Scenarios.
+
+Estos escenarios definen la robustez y eficiencia que la arquitectura debe soportar.
+
+<table class="quality-attribute-section">
+  <thead>
+    <tr>
+      <th>Atributo</th>
+      <th>Fuente</th>
+      <th>Estímulo</th>
+      <th>Artefacto</th>
+      <th>Entorno</th>
+      <th>Respuesta</th>
+      <th>Medida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Privacidad</td>
+      <td>Usuario</td>
+      <td>Generación de patrones de comportamiento</td>
+      <td>AI Service (Ollama)</td>
+      <td>Operación normal</td>
+      <td>Los datos se procesan localmente sin salir a nubes de terceros.</td>
+      <td>100% de inferencias locales.</td>
+    </tr>
+    <tr>
+      <td>Seguridad</td>
+      <td>Sistema</td>
+      <td>Salida del usuario del hogar</td>
+      <td>Security Service</td>
+      <td>Operación normal</td>
+      <td>Bloqueo inmediato de la cerradura y deshabilitación de controles manuales.</td>
+      <td>Bloqueo en &lt; 1 segundo.</td>
+    </tr>
+    <tr>
+      <td>Disponibilidad</td>
+      <td>Mobile App</td>
+      <td>Reporte continuo de GPS</td>
+      <td>Proximity Service</td>
+      <td>Carga alta</td>
+      <td>El servicio debe procesar cada evento de geofencing para disparar la automatización.</td>
+      <td>99.9% de uptime del servicio.</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### 4.1.2.3.	Constraints.
 
+Factores técnicos y de negocio que limitan las opciones de diseño.
+
+<table class="constraints">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CON-01</td>
+      <td>Stack Tecnológico</td>
+      <td>Uso de NestJS para lógica de negocio y Python para IA/Edge.</td>
+      <td>Los servicios deben ser interoperables mediante gRPC o REST.</td>
+      <td>Arquitectura Global</td>
+    </tr>
+    <tr>
+      <td>CON-02</td>
+      <td>Despliegue en Railway</td>
+      <td>Todos los microservicios deben desplegarse en contenedores individuales en la plataforma Railway.</td>
+      <td>Configuración de SSL automático por cada servicio.</td>
+      <td>Infraestructura</td>
+    </tr>
+    <tr>
+      <td>CON-03</td>
+      <td>Hardware IoT</td>
+      <td>Comunicación obligatoria con microcontroladores ESP32 vía HTTP/REST.</td>
+      <td>Reporte de telemetría cada 5-10 segundos.</td>
+      <td>Dispositivos</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.1.3.	Architectural Drivers Backlog.
+
+Priorización de los factores que más impactan en la complejidad técnica.
+
+<table class="drivers">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título de Driver</th>
+      <th>Descripción</th>
+      <th>Importancia Stakeholders</th>
+      <th>Impacto en Arquitectura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D1</td>
+      <td>Inferencia Local (Ollama)</td>
+      <td>Procesamiento de IA sin costos de tokens y con privacidad total.</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>D2</td>
+      <td>SoC de Seguridad</td>
+      <td>Aislamiento de la lógica de cerradura para evitar efectos colaterales.</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>D3</td>
+      <td>Comunicación Edge/IoT</td>
+      <td>Gestión de telemetría y comandos en tiempo real con ESP32.</td>
+      <td>Medium</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 4.1.4.	Architectural Design Decisions.
 
+* **Adopción de Microservicios:** Se decidió separar responsabilidades en servicios NestJS para escalabilidad y mantenimiento independiente.
+* **Motor de IA Local (Ollama):** Se descartaron APIs de nube para garantizar la privacidad y reducir costos operativos.
+* **Estrategia de Persistencia:** Uso de Supabase para aprovechar PostgreSQL y capacidades de tiempo real para la Web App.
+
+
 #### 4.1.5.	Quality Attribute Scenario Refinements.
+
+Tras la finalización del Quality Attribute Workshop, el equipo de arquitectura determinó que la privacidad de los datos de comportamiento y la latencia en la respuesta física son los pilares críticos de la solución. Se decidió implementar Ollama en Docker para garantizar que el 100% de la inferencia de IA sea local y utilizar comunicación gRPC entre microservicios para minimizar los tiempos de respuesta en eventos de geofencing.
+
+**Scenario Refinement for Scenario 1: Privacidad y Confidencialidad**
+
+<table class="scenario-1-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Generación de patrones de hábitos del usuario sin exposición a nubes externas.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Garantizar la privacidad total del hogar para generar confianza en el usuario residencial.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Confidencialidad, Privacidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Hábitos diarios del usuario (iluminación, clima).</li>
+          <li><strong>Stimulus:</strong> Análisis del historial para predicción de estados.</li>
+          <li><strong>Environment:</strong> Operación normal del sistema (Modo Batch nocturno).</li>
+          <li><strong>Artifact:</strong> AI Service operando con Ollama Engine.</li>
+          <li><strong>Response:</strong> El procesamiento se realiza exclusivamente en el contenedor local de Railway.</li>
+          <li><strong>Response Measure:</strong> 0% de datos personales o patrones de conducta son enviados a APIs externas.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿El hardware de Railway soporta la carga del modelo LLM local?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>La latencia inicial de carga del modelo en el contenedor.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Scenario Refinement for Scenario 2: Seguridad Física (Acceso)**
+
+<table class="scenario-2-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Aseguramiento inmediato del hogar al detectar la salida del usuario.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Ofrecer una solución de seguridad robusta y autónoma.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Seguridad (Integridad), Fiabilidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Mobile App (GPS/Geofencing).</li>
+          <li><strong>Stimulus:</strong> Evento users.left (usuario fuera del rango de casa).</li>
+          <li><strong>Environment:</strong> Operación normal.</li>
+          <li><strong>Artifact:</strong> Security Service (Lógica aislada).</li>
+          <li><strong>Response:</strong> Bloqueo de cerradura física y restricción de controles manuales en apps.</li>
+          <li><strong>Response Measure:</strong> El bloqueo debe completarse en menos de 1 segundo tras la recepción del evento.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿Qué sucede si el ESP32 pierde conexión a internet al momento de la salida?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>Necesidad de un mecanismo de fallback local (Bluetooth) para emergencias.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Scenario Refinement for Scenario 3: Disponibilidad y Rendimiento (Trigger)**
+
+<table class="scenario-3-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Activación de dispositivos por proximidad con latencia imperceptible.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Proporcionar una experiencia de usuario fluida y reactiva.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Disponibilidad, Rendimiento.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Mobile App reportando GPS continuamente.</li>
+          <li><strong>Stimulus:</strong> Detección de proximidad y reporte al REST API.</li>
+          <li><strong>Environment:</strong> Carga alta de peticiones (múltiples usuarios).</li>
+          <li><strong>Artifact:</strong> Proximity Service y Device Service.</li>
+          <li><strong>Response:</strong> Inferencia del AI Service y envío de comandos al ESP32 vía gRPC.</li>
+          <li><strong>Response Measure:</strong> Ejecución total de la automatización en &lt; 2 segundos desde el geofence.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿Cómo afecta el modo de ahorro de energía del smartphone al geofencing?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>La precisión del GPS en interiores o zonas de baja cobertura.</td>
+    </tr>
+  </tbody>
+</table>
+
+Para este refinamiento, se ha integrado formalmente la lógica de inferencia para la toma de decisiones del **AI Service**:
+
+$$P(Device_{on} | Context) = \sigma(W_{time} \cdot T + W_{history} \cdot H + W_{proximity} \cdot P)$$
+
+**Leyenda:**
+
+* **$P(Device_{on} | Context)$**: Es la Probabilidad de Encendido. Representa qué tan seguro está el sistema de que debe encender un dispositivo específico (como el AC o la cafetera) dado el contexto actual.
+* **$\sigma$ (Sigma)**: Es la Función Sigmoide. Su trabajo es "aplastar" cualquier número que salga de la suma y convertirlo en un valor entre 0 y 1 (donde 1 es 100% de probabilidad).
+* **$T$ (Time)**: El factor Tiempo. Representa la hora actual. No es lo mismo llegar a casa a las 2 PM (necesitas aire acondicionado) que a las 8 AM (necesitas la cafetera).
+* **$H$ (History)**: El factor Historial. Son tus hábitos acumulados que el servicio analiza cada noche en el modo batch. Si el 90% de los lunes enciendes la TV al llegar, este valor será muy alto ese día.
+* **$P$ (Proximity)**: El factor Proximidad. Indica qué tan cerca estás del hogar según el geofencing de la app. Ayuda a decidir si la acción debe ser inmediata o puede esperar un poco.
+* **$W$ ($W_{time}, W_{history}, W_{proximity}$)**: Son los Pesos (Weights). Es lo que la IA realmente "aprende". Si el sistema nota que tus hábitos cambian según la hora pero no según tu ubicación, le dará más "peso" a $W_{time}$ que a $W_{proximity}$.
 
 ### 4.2.	Strategic-Level Domain-Driven Design.
 
 #### 4.2.1.	EventStorming.
 
+El **EventStorming** nos ayudó a visualizar el flujo completo de eventos, identificar los dominios clave y entender la lógica de negocio del sistema de manera colaborativa y visual.
+
+<img src="assets/chapter4/GeoEntry - EventStorming.jpg" alt="EventStorming">
+
+[Enlace al EventStorming](https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497)
+
+
 #### 4.2.2.	Candidate Context Discovery.
+
+<img src="assets/chapter4/GeoEntry - Candidate Context Discovery.jpg" alt="Candidate-Contexts">
+
+[Enlace al Candidate Context Discovery](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14)
+
 
 #### 4.2.3.	Domain Message Flows Modeling.
 
+<img src="assets/chapter4/GeoEntry - Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling">
+
+[Enlace al Domain Message Flows Modeling](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14)
+
 #### 4.2.4.	Bounded Context Canvases.
 
+<img src="assets/chapter4/GeoEntry - Bounded Context Canvases.jpg" alt="Bounded Context Canvases">
+
+[Enlace al Bounded Context Canvases](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14)
+
 #### 4.2.5.	Context Mapping.
+
+En esta sección se detalla el mapa de relaciones entre los seis Bounded Contexts que componen el ecosistema de GeoEntry. Tras el proceso de Candidate Context Discovery, el equipo evaluó la mejor forma de integrar estos dominios para garantizar que la automatización sea fluida pero, sobre todo, segura.
+
+**Definición de Relaciones Estructurales**
+
+Para definir el mapa, el equipo discutió alternativas clave como:
+
+* **Aislamiento de Seguridad**: Se decidió que el Security Context sea el más restrictivo, actuando como un "Downstream" protegido de las decisiones probabilísticas del IA Context.
+* **Centralización de Notificaciones**: En lugar de que cada servicio envíe alertas por su cuenta, se creó el Notification Context como un servicio especializado para desacoplar la lógica de mensajería del negocio central.
+
+<table class="context-mapping-table">
+  <thead>
+    <tr>
+      <th>Origen (Upstream)</th>
+      <th>Destino (Downstream)</th>
+      <th>Patrón de Relación</th>
+      <th>Justificación Técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>User Context</td>
+      <td>Todos los Contextos</td>
+      <td>Conformist</td>
+      <td>El contexto de usuario provee la identidad y roles. Los demás servicios se "conforman" al formato del JWT para validar permisos.</td>
+    </tr>
+    <tr>
+      <td>Proximity Context</td>
+      <td>Security / Device</td>
+      <td>Customer/Supplier</td>
+      <td>Proximity detecta el geofencing (Proveedor) y Security/Device reaccionan (Clientes). Existe una alta coordinación para evitar falsos positivos.</td>
+    </tr>
+    <tr>
+      <td>IA Context</td>
+      <td>Device Context</td>
+      <td>Upstream/Downstream (ACL)</td>
+      <td>La IA entrega predicciones complejas. El Device Context usa una ACL (Anti-corruption Layer) para validar que la sugerencia sea un comando físico válido.</td>
+    </tr>
+    <tr>
+      <td>Device Context</td>
+      <td>Notification Context</td>
+      <td>Customer/Supplier</td>
+      <td>Cuando un dispositivo cambia de estado, el Notification Context "abastece" la alerta al usuario para confirmar la acción.</td>
+    </tr>
+    <tr>
+      <td>Security Context</td>
+      <td>Notification Context</td>
+      <td>Customer/Supplier</td>
+      <td>Eventos críticos (cerradura abierta) disparan alertas prioritarias de forma inmediata.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Análisis de Decisiones de Diseño (Design Critique)**
+
+* **Shared Kernel (Supabase)**: Se utiliza Supabase como núcleo compartido únicamente para la sincronización de estados en tiempo real. Esto permite que el cambio de una luz (Device Context) se refleje instantáneamente en la interfaz de usuario sin pasar por orquestaciones complejas.
+* **Anti-corruption Layer (ACL) en IA**: Se implementó para proteger el hardware. Si el modelo local en Ollama generara una salida inesperada debido a una alucinación del modelo, la ACL en el Device Context filtra la petición, asegurando que solo comandos conocidos (ON/OFF, niveles de temperatura) lleguen al ESP32.
+* **Independencia del Safety Context (Security)**: Al separar Security de Device, nos aseguramos de que si el servidor de luces falla, la cerradura siga funcionando de forma independiente y segura, siguiendo el principio de diseño de "falla segura".
 
 ### 4.3.	Software Architecture.
 
 #### 4.3.1.	Software Architecture System Landscape Diagram.
 
-#### 4.3.1.	Software Architecture Context Level Diagrams.
+<img src="assets/chapter4/Landscape.png" alt="Landscape">
 
-#### 4.3.2.	Software Architecture Container Level Diagrams.
+#### 4.3.2.	Software Architecture Context Level Diagrams.
+
+<img src="assets/chapter4/Contexto.png" alt="Contexto">
+
+#### 4.3.3.	Software Architecture Container Level Diagrams.
+
+<img src="assets/chapter4/Contenedores.png" alt="Contenedores">
 
 #### 4.3.3.	Software Architecture Deployment Diagrams.
+
+<img src="assets/chapter4/Deployment.png" alt="Deployment">
 
 
 
