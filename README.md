@@ -1065,11 +1065,19 @@ $$P(Device_{on} | Context) = \sigma(W_{time} \cdot T + W_{history} \cdot H + W_{
 
 #### 4.3.1.	Software Architecture System Landscape Diagram.
 
-#### 4.3.1.	Software Architecture Context Level Diagrams.
+<img src="assets/chapter4/Landscape.png" alt="Landscape">
 
-#### 4.3.2.	Software Architecture Container Level Diagrams.
+#### 4.3.2.	Software Architecture Context Level Diagrams.
+
+<img src="assets/chapter4/Contexto.png" alt="Contexto">
+
+#### 4.3.3.	Software Architecture Container Level Diagrams.
+
+<img src="assets/chapter4/Contenedores.png" alt="Contenedores">
 
 #### 4.3.3.	Software Architecture Deployment Diagrams.
+
+<img src="assets/chapter4/Deployment.png" alt="Deployment">
 
 
 
