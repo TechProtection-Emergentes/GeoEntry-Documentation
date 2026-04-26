@@ -164,10 +164,69 @@
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
-
-
-
 ## Student Outcome 
+
+<section class="outcome-section">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center;">Criterio específico</th>
+        <th style="text-align: center;">Acciones realizadas</th>
+        <th style="text-align: center;">Conclusiones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="vertical-align: top; width: 25%;"><strong>Comunica oralmente</strong> sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.</td>
+        <td style="vertical-align: top;">
+          <strong>Eric Agama Espinoza:</strong><br>
+          TB1:<br>
+          Sustentó el <strong>Product Backlog</strong> y la <strong>User Task Matrix</strong>, explicando la prioridad de las tareas basada en la frecuencia de uso por parte de los segmentos objetivo.<br><br>
+          <strong>Rodrigo Adrián López Huamán:</strong><br>
+          TB1:<br>
+          Expuso las decisiones de arquitectura basadas en el <strong>Strategic-Level Attribute-Driven Design</strong>, justificando el uso de Ollama para la privacidad de datos.<br><br>
+          <strong>Merly Salon Puerta:</strong><br>
+          TB1:<br>
+          Presentó el <strong>Lean UX Canvas</strong> y las <strong>Hypothesis Statements</strong>, detallando la relación entre las necesidades del usuario y las soluciones propuestas.<br><br>
+          <strong>Nicolas Alejandro Vera Nuñez:</strong><br>
+          TB1:<br>
+          Explicó los diagramas de arquitectura de software (<strong>System Landscape y Context Level</strong>), detallando las interacciones entre microservicios.<br><br>
+          <strong>Rodrigo Jesús Salvador Rodríguez:</strong><br>
+          TB1:<br>
+          Sustentó el <strong>Análisis Competitivo</strong> y el <strong>Impact Mapping</strong>, resaltando las tácticas estratégicas para diferenciar a la startup en el mercado.
+        </td>
+        <td style="vertical-align: top; width: 25%;">
+          Se logró alinear las expectativas del equipo sobre el orden de implementación técnica según el valor de negocio. Se comunicó con éxito cómo los drivers arquitectónicos mitigan los riesgos de seguridad y se demostró capacidad para validar suposiciones de diseño mediante una narrativa lógica. Finalmente, se estableció una base clara para el entendimiento técnico de la interoperabilidad del sistema y su posicionamiento estratégico en el mercado.
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top;"><strong>Comunica en forma escrita</strong> ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.</td>
+        <td style="vertical-align: top;">
+          <strong>Eric Agama Espinoza:</strong><br>
+          TB1:<br>
+          Documentó el <strong>Ubiquitous Language</strong> y el <strong>Product Backlog</strong>, asegurando una terminología consistente entre el negocio y la especificación técnica.<br><br>
+          <strong>Rodrigo Adrián López Huamán:</strong><br>
+          TB1:<br>
+          Redactó los <strong>Quality Attribute Scenario Refinements</strong> y el <strong>Context Mapping</strong>, definiendo formalmente las relaciones entre Bounded Contexts.<br><br>
+          <strong>Merly Salon Puerta:</strong><br>
+          TB1:<br>
+          Desarrolló los <strong>User Personas</strong> y el <strong>Empathy Mapping</strong>, traduciendo los hallazgos de las entrevistas en perfiles de usuario accionables.<br><br>
+          <strong>Nicolas Alejandro Vera Nuñez:</strong><br>
+          TB1:<br>
+          Elaboró los <strong>Bounded Context Canvases</strong> y los diagramas de contenedores y despliegue (<strong>C4 Model</strong>), detallando la infraestructura en Railway.<br><br>
+          <strong>Rodrigo Jesús Salvador Rodríguez:</strong><br>
+          TB1:<br>
+          Documentó el <strong>Lean UX Problem Statements</strong> y el <strong>To-Be Scenario Mapping</strong>, plasmando la visión futura de la interacción del usuario con el sistema.
+        </td>
+        <td style="vertical-align: top;">
+          Se proveyó un lenguaje común escrito que redujo la ambigüedad en la especificación de requerimientos. La documentación técnica producida es precisa y sirve como guía normativa para el desarrollo de microservicios. Se garantizó que la problemática y la solución estuvieran documentadas con rigor técnico, permitiendo una implementación sin errores de interpretación y sintetizando procesos complejos en flujos de trabajo claros.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
 
 ## Capítulo I: Introducción
 
