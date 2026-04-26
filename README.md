@@ -269,10 +269,10 @@ Este segmento está conformado por negocios como hoteles boutique, coworking y e
 GeoEntry les permite optimizar procesos como el acceso, la iluminación y la climatización, además de ofrecer personalización basada en el comportamiento del usuario, generando valor agregado y diferenciación en el mercado.
 
 
-### Capítulo II: Requirements Elicitation & Analysis
+## Capítulo II: Requirements Elicitation & Analysis
 
-## 2.1 Competidores
-### 2.1.1 Análisis competitivo
+### 2.1 Competidores
+#### 2.1.1 Análisis competitivo
 
 Se realiza este análisis con el propósito de comprender el alcance de la solución propuesta y su posicionamiento frente a alternativas existentes, así como evaluar cómo la integración de tecnologías como IoT e Inteligencia Artificial en GeoEntry aporta valor diferencial en la automatización del hogar y en la optimización de la experiencia del usuario.
 
@@ -375,7 +375,7 @@ Se realiza este análisis con el propósito de comprender el alcance de la soluc
   </tbody>
 </table>
 
-### 2.1.2 Estrategias y tácticas frente a competidores
+#### 2.1.2 Estrategias y tácticas frente a competidores
 
 | Competidores | ¿Qué se puede hacer para ganarle a la competencia? |
 | --- | --- |
@@ -383,11 +383,11 @@ Se realiza este análisis con el propósito de comprender el alcance de la soluc
 | Competidor 2: SmartThings (Samsung) |  - Simplificar la instalación y gestión para hacerla accesible a usuarios menos técnicos, ofreciendo una experiencia intuitiva y sin fricciones. <br> - Mejorar la integración con dispositivos existentes para que los usuarios no necesiten reemplazar toda su infraestructura de hogar inteligente. <br> - Enfocar más en la personalización para negocios, como hoteles boutique y espacios comerciales, agregando valor a esos segmentos con características específicas. <br> - Fomentar una comunidad activa de usuarios que compartan configuraciones personalizadas y escenas para aumentar el valor de la plataforma a medida que crece. |
 | Competidor 3: Control4 (Snap One) |  - Proporcionar una opción más accesible, enfocándose en la facilidad de uso y la reducción de la necesidad de instalación profesional obligatoria. <br> - Ofrecer precios más competitivos en comparación con Control4, haciendo que la tecnología avanzada sea más accesible para un público más amplio. <br> - Desarrollar un sistema modular que permita a los usuarios comenzar con una inversión pequeña y aumentar la escala a medida que se familiarizan con el sistema. <br> - Desarrollar propiedad intelectual alrededor de sus algoritmos de detección y personalización para proteger la tecnología y mantener una ventaja competitiva.|
 
-## 2.2 Entrevistas
+### 2.2 Entrevistas
 
 En la presente sección del informe se desarrollará el diseño, registro y análisis de las entrevistas dirigidas a los segmentos objetivo previamente identificados, con el fin de validar la pertinencia de la solución tecnológica propuesta.
 
-### 2.2.1 Diseño de entrevistas
+#### 2.2.1 Diseño de entrevistas
 
 Se han identificado los siguientes segmentos:
   - Usuarios residenciales con tecnología inteligente en el hogar.
@@ -398,8 +398,8 @@ Antes de llevar a cabo las entrevistas, se consideró necesario realizar un aná
 Este enfoque permitió estructurar adecuadamente el proceso de levantamiento de información, facilitando la formulación de preguntas alineadas con los componentes clave de GeoEntry, tales como la automatización basada en proximidad, la integración de dispositivos IoT y el uso de Inteligencia Artificial para el aprendizaje de patrones de comportamiento.<br>
 En ese sentido, se elaboraron preguntas específicas para cada segmento con el propósito de identificar necesidades, problemáticas y percepciones relacionadas con el control de accesos, la personalización de entornos y la eficiencia en la gestión energética, aspectos fundamentales que la solución GeoEntry busca optimizar.<br>
 
-#### Segmento: Hogares inteligentes (usuarios residenciales)
-#### Principales:
+##### Segmento: Hogares inteligentes (usuarios residenciales)
+##### Principales:
 1. **Introducción al Contexto**: ¿Podría describir qué tecnologías inteligentes tiene actualmente en su hogar y cómo las utiliza en su día a día?
 2. **Experiencia Actual**: ¿Cómo es su experiencia al llegar a casa? ¿Qué acciones debe realizar manualmente que le gustaría automatizar?
 3. **Desafíos y Frustraciones**: ¿Cuáles son los mayores inconvenientes o frustraciones que experimenta con la tecnología existente en su hogar?
@@ -428,10 +428,10 @@ En ese sentido, se elaboraron preguntas específicas para cada segmento con el p
 
 <br>
 
-### 2.2.2 Registro de entrevistas
+#### 2.2.2 Registro de entrevistas
 A continuación se presentan los resúmenes de las entrevistas realizadas a representantes de nuestros dos segmentos objetivo.<br>
 
-#### Segmento 1: Hogares inteligentes (usuarios residenciales)
+##### Segmento 1: Hogares inteligentes (usuarios residenciales)
 
 | Entrevista 1 | Alejandro Barturen |
 |------------------|----------------------|
@@ -457,7 +457,7 @@ A continuación se presentan los resúmenes de las entrevistas realizadas a repr
 | URL | [Link de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212191_upc_edu_pe/Ef1mZmoe1IhPqK2f1KDjgCcBLt2oHTY96O9FZXKflCoC6Q?e=ivDzYC&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 <br>
 
-#### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
+##### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
 
 | Entrevista 4 |  Jose Cuevas Vera |
 |------------------|----------------------|
@@ -483,12 +483,12 @@ A continuación se presentan los resúmenes de las entrevistas realizadas a repr
 | URL | [Link de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212191_upc_edu_pe/EZPAAJNQre9Jhpd3GScHJQkBGMWWwFLWYQu7LjusuwP-5A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KPHLt2)            |
 <br>
 
-### 2.2.3 Análisis de entrevistas
+#### 2.2.3 Análisis de entrevistas
 
 Tras analizar las entrevistas realizadas, se identifican los siguientes patrones y conclusiones relevantes para cada segmento:
 
-#### Segmento 1: Hogares inteligentes (usuarios residenciales)
-#### Patrones identificados:
+##### Segmento 1: Hogares inteligentes (usuarios residenciales)
+###### Patrones identificados:
 1. Fragmentación como dolor principal: Los tres entrevistados mencionan la fragmentación de los sistemas y la multiplicidad de aplicaciones como una frustración importante.
 2. Deseo de automatización basada en presencia: Existe un claro deseo de que el sistema reconozca automáticamente su llegada sin necesidad de comandos o aplicaciones.
 3. Preocupación por complejidad: Independientemente del nivel de experiencia con tecnología, todos expresan preocupación por la complejidad de instalación y configuración.
@@ -497,7 +497,7 @@ Tras analizar las entrevistas realizadas, se identifican los siguientes patrones
 
 <br>
 
-#### Necesidades prioritarias:
+##### Necesidades prioritarias:
   - Solución integrada que reduzca la fragmentación de aplicaciones
   - Detección automática de presencia que active configuraciones personalizadas
   - Instalación y configuración sencilla, idealmente sin conocimientos técnicos avanzados
@@ -505,18 +505,18 @@ Tras analizar las entrevistas realizadas, se identifican los siguientes patrones
 
 **Rangos de inversión**: Entre $300-1000 dependiendo del nivel de adopción previo de tecnología y complejidad de la solución.
 
-#### Propósito de Entrevistas (Segmento 1):
+##### Propósito de Entrevistas (Segmento 1):
 El propósito de estas entrevistas es comprender en profundidad las rutinas, frustraciones y expectativas de los usuarios residenciales que ya interactúan con tecnología inteligente en sus hogares. Buscamos identificar qué aspectos de su experiencia de llegada a casa podrían mejorarse mediante automatización, qué tipo de soluciones les resultan atractivas, qué barreras perciben para adoptar nuevas tecnologías y cuál es su disposición a invertir en sistemas que mejoren su comodidad y seguridad. Además, deseamos explorar cómo priorizan elementos como la privacidad, el control, la personalización y la compatibilidad entre dispositivos, ya que estos factores influyen directamente en su confianza hacia nuevas soluciones tecnológicas. Con esta información, podremos definir de forma más precisa las características mínimas necesarias para una propuesta de valor efectiva, segmentar a los usuarios según sus hábitos y preferencias, y anticipar posibles objeciones en el proceso de adopción. También se busca detectar patrones en las decisiones de compra y evaluar la aceptación de sistemas basados en geolocalización o automatización contextual.<br>
 
-#### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
-#### Patrones identificados:
+##### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
+##### Patrones identificados:
 1. Personalización como diferenciador: Los tres negocios ven la experiencia personalizada como un importante diferenciador en mercados competitivos.
 2. Transiciones fluidas: Buscan eliminar fricciones en los momentos de llegada, registro o cambio de actividad.
 3. Integración con sistemas existentes: Todos cuentan con sistemas digitales parciales que desean integrar en una solución coherente.
 4. Valor del análisis de datos: Muestran interés en obtener datos sobre patrones de uso para optimizar sus operaciones.
 5. Necesidad de control flexible: Requieren equilibrio entre automatización y capacidad de ajuste manual según circunstancias variables.
 
-#### Necesidades prioritarias:
+##### Necesidades prioritarias:
   - Reconocimiento automático de clientes/miembros con activación de preferencias personalizadas
   - Integración con sistemas de gestión y reservas existentes
   - Interfaz simple para configuración por personal no técnico
@@ -525,22 +525,22 @@ El propósito de estas entrevistas es comprender en profundidad las rutinas, fru
 
 **Rangos de inversión**: Entre $3,000-15,000 dependiendo del tamaño del negocio, la complejidad de la integración con sistemas existentes y el nivel de personalización deseado. Negocios más grandes o con alto flujo de clientes están dispuestos a invertir más si la solución ofrece beneficios claros en eficiencia operativa y experiencia del usuario.
 
-#### Propósito de Entrevistas (Segmento 2):
+##### Propósito de Entrevistas (Segmento 2):
 
 Estas entrevistas tienen como finalidad explorar cómo los negocios perciben la importancia de la primera impresión al recibir a sus clientes o empleados, y qué limitaciones enfrentan actualmente para ofrecer una experiencia de entrada fluida y memorable. Se busca entender el valor que le asignan a la automatización en este contexto, qué nivel de personalización requieren, cuáles son sus expectativas en cuanto al retorno de inversión, y qué factores influirían en su decisión de implementar una solución tecnológica. También nos interesa conocer los tipos de negocios más receptivos a este tipo de soluciones, la frecuencia de interacción con sus visitantes, y los puntos críticos donde la automatización podría generar mayor impacto. A partir de esto, podremos determinar cuáles son los casos de uso más relevantes, identificar requisitos funcionales comunes entre negocios y diseñar propuestas flexibles que puedan adaptarse a distintos tamaños, rubros y horarios de operación. Asimismo, evaluaremos la disposición de los negocios a invertir recursos humanos y financieros en mantener este tipo de tecnologías operativas.
 
-## 2.3 Needfinding
-### 2.3.1 User Personas
+### 2.3 Needfinding
+#### 2.3.1 User Personas
 
-#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+##### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
 
 <img src="assets/userPersona1.png"/>
 
-#### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
+##### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
 
 <img src="assets/userPersona2.png"/>
 
-### 2.3.2 User Task Matrix
+#### 2.3.2 User Task Matrix
 
 En esta sección se presenta la User Task Matrix, en la cual se analizan las actividades realizadas por los segmentos identificados: usuarios residenciales con hogares inteligentes y negocios interesados en implementar experiencias de bienvenida automatizadas. El objetivo de esta matriz es comprender cómo dichas actividades se relacionan con el uso potencial de una solución como GeoEntry, la cual integra tecnologías IoT e Inteligencia Artificial para automatizar procesos en función de la presencia y los patrones de comportamiento del usuario.
 <br>
@@ -563,11 +563,11 @@ Matriz de tareas
 |Personalizar configuraciones automáticas según hábitos y patrones de uso detectados|A menudo|Alta|A veces|Media|
 <br>
 
-#### Análisis de Tareas
+##### Análisis de Tareas
 
 A partir del análisis de la matriz de tareas, se identifica que tanto los usuarios residenciales con hogares inteligentes como los negocios interesados en experiencias de bienvenida automatizadas coinciden en la relevancia de actividades vinculadas a la automatización, la integración tecnológica y la personalización basada en el comportamiento del usuario. Estas coincidencias evidencian un contexto favorable para la implementación de una solución como GeoEntry, la cual integra IoT e Inteligencia Artificial para optimizar dichos procesos de manera autónoma.
 
-#### Tareas de alta frecuencia e importancia para usuarios residenciales
+##### Tareas de alta frecuencia e importancia para usuarios residenciales
 
 - Configurar automatizaciones para la llegada en función de la proximidad:
     Constituye una necesidad prioritaria, ya que los usuarios buscan eliminar la intervención manual en acciones como el acceso, iluminación y climatización, favoreciendo una experiencia automatizada desde el ingreso al hogar.
@@ -578,7 +578,7 @@ A partir del análisis de la matriz de tareas, se identifica que tanto los usuar
 - Evaluar costos de inversión en soluciones de automatización:
     Existe una alta preocupación por la relación costo-beneficio, priorizando soluciones escalables, eficientes y de fácil implementación.
 
-#### Tareas de alta frecuencia e importancia para negocios
+##### Tareas de alta frecuencia e importancia para negocios
 
 - Optimizar el proceso de llegada y registro de clientes mediante automatización:
     La automatización del ingreso y la reducción de fricciones impactan directamente en la percepción del servicio y la eficiencia operativa.
@@ -594,9 +594,9 @@ A partir del análisis de la matriz de tareas, se identifica que tanto los usuar
 La coincidencia entre ambos segmentos radica en la necesidad de una automatización inteligente y sin fricciones, donde la tecnología se adapta al usuario mediante el reconocimiento de presencia y el aprendizaje de hábitos, en lugar de requerir interacción constante. En este contexto, aspectos como la integración de dispositivos IoT, la seguridad de la información y la personalización de la experiencia se consolidan como factores determinantes.<br>
 Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la demanda de soluciones que combinen automatización basada en proximidad con capacidades de Inteligencia Artificial, permitiendo una gestión eficiente, predictiva y adaptativa tanto en entornos residenciales como comerciales.
 
-### 2.3.3 Empathy Mapping
+#### 2.3.3 Empathy Mapping
 
-#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+##### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
 
 | **¿Qué Piensa y Siente?** | **¿Qué ve?** |
 |---|---|
@@ -624,7 +624,7 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 <br>
 
-#### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
+##### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
 
 | **¿Qué Piensa y Siente?** | **¿Qué ve?** |
 |---|---|
@@ -650,17 +650,17 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 |Inconsistencia en la experiencia del cliente por dependencia del personal.|Ofrecer una experiencia homogénea, eficiente y personalizada.|
 |Riesgos en seguridad informática y protección de datos.|Contar con una solución robusta, integrada y confiable.|
 
-### 2.3.4 As-is Scenario Mapping
+#### 2.3.4 As-is Scenario Mapping
 
-#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+##### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
 
 <img src="assets/asIs1.png"/>
 
-#### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
+##### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
 
 <img src="assets/asIs2.png"/>
 
-## 2.4 Ubiquitous Language
+### 2.4 Ubiquitous Language
 
 **Ubiquitous Language – GeoEntry**
 
@@ -683,13 +683,15 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 |Escalabilidad del Sistema|Capacidad de GeoEntry para expandirse mediante la incorporación de nuevos dispositivos, funcionalidades o espacios, manteniendo un rendimiento óptimo.|
 |Interoperabilidad|Habilidad del sistema para funcionar de manera fluida con múltiples dispositivos, protocolos y plataformas externas, garantizando una experiencia integrada.|
 
-## 3.1.	To-Be Scenario Mapping.
+## Capítulo III: Requirements Specification
 
-## 3.2.	User Stories.
+### 3.1.	To-Be Scenario Mapping.
 
-## 3.3.	Impact Mapping.
+### 3.2.	User Stories.
 
-## 3.4.	Product Backlog.
+### 3.3.	Impact Mapping.
+
+### 3.4.	Product Backlog.
 
 
 
