@@ -814,6 +814,43 @@ Estos escenarios definen la robustez y eficiencia que la arquitectura debe sopor
 
 ##### 4.1.2.3.	Constraints.
 
+Factores técnicos y de negocio que limitan las opciones de diseño.
+
+<table class="constraints">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CON-01</td>
+      <td>Stack Tecnológico</td>
+      <td>Uso de NestJS para lógica de negocio y Python para IA/Edge.</td>
+      <td>Los servicios deben ser interoperables mediante gRPC o REST.</td>
+      <td>Arquitectura Global</td>
+    </tr>
+    <tr>
+      <td>CON-02</td>
+      <td>Despliegue en Railway</td>
+      <td>Todos los microservicios deben desplegarse en contenedores individuales en la plataforma Railway.</td>
+      <td>Configuración de SSL automático por cada servicio.</td>
+      <td>Infraestructura</td>
+    </tr>
+    <tr>
+      <td>CON-03</td>
+      <td>Hardware IoT</td>
+      <td>Comunicación obligatoria con microcontroladores ESP32 vía HTTP/REST.</td>
+      <td>Reporte de telemetría cada 5-10 segundos.</td>
+      <td>Dispositivos</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.1.3.	Architectural Drivers Backlog.
 
 #### 4.1.4.	Architectural Design Decisions.
