@@ -719,11 +719,98 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 #### 4.1.1.	Design Purpose.
 
+El propósito del diseño es establecer una arquitectura escalable y segura para una plataforma inteligente de automatización del hogar que elimine la intervención manual mediante el uso de geofencing e IA. Se busca satisfacer la necesidad de los usuarios residenciales de tener un hogar autónomo y de los negocios de gestionar múltiples sedes de forma centralizada. El diseño prioriza la privacidad de los datos mediante el procesamiento de patrones de comportamiento de forma local.
+
 #### 4.1.2.	Attribute-Driven Design Inputs.
+
+El proceso de diseño se nutre de requisitos funcionales críticos, atributos de calidad exigentes y restricciones técnicas innegociables.
+
 
 ##### 4.1.2.1.	Primary Functionality (Primary User Stories).
 
+Se han seleccionado las historias de usuario que definen el comportamiento central del sistema y dictan la necesidad de microservicios especializados.
+
+<table class="primary-functionality-section">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>US01</td>
+      <td>Automatización por proximidad</td>
+      <td>Como usuario residencial, quiero que mi hogar detecte mi llegada para que se desbloquee la cerradura y se preparen los dispositivos automáticamente.</td>
+      <td>El sistema debe emitir eventos <code>user.entered</code> y ejecutar acciones en menos de 2 segundos.</td>
+      <td>EPIC-01 (Autonomía)</td>
+    </tr>
+    <tr>
+      <td>US02</td>
+      <td>Control manual en tiempo real</td>
+      <td>Como usuario, quiero activar o desactivar dispositivos manualmente desde la app móvil para tener control total cuando lo desee.</td>
+      <td>La latencia entre el comando en la app y la respuesta del ESP32 no debe superar los 500ms.</td>
+      <td>EPIC-02 (Gestión)</td>
+    </tr>
+    <tr>
+      <td>US03</td>
+      <td>Aprendizaje de hábitos</td>
+      <td>Como usuario, quiero que el sistema aprenda mis horarios de uso de luces y AC para que se anticipe a mis necesidades.</td>
+      <td>El AI Service debe actualizar los modelos de patrones cada noche en un proceso batch.</td>
+      <td>EPIC-03 (Inteligencia)</td>
+    </tr>
+  </tbody>
+</table>
+
 ##### 4.1.2.2.	Quality attribute Scenarios.
+
+Estos escenarios definen la robustez y eficiencia que la arquitectura debe soportar.
+
+<table class="quality-attribute-section">
+  <thead>
+    <tr>
+      <th>Atributo</th>
+      <th>Fuente</th>
+      <th>Estímulo</th>
+      <th>Artefacto</th>
+      <th>Entorno</th>
+      <th>Respuesta</th>
+      <th>Medida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Privacidad</td>
+      <td>Usuario</td>
+      <td>Generación de patrones de comportamiento</td>
+      <td>AI Service (Ollama)</td>
+      <td>Operación normal</td>
+      <td>Los datos se procesan localmente sin salir a nubes de terceros.</td>
+      <td>100% de inferencias locales.</td>
+    </tr>
+    <tr>
+      <td>Seguridad</td>
+      <td>Sistema</td>
+      <td>Salida del usuario del hogar</td>
+      <td>Security Service</td>
+      <td>Operación normal</td>
+      <td>Bloqueo inmediato de la cerradura y deshabilitación de controles manuales.</td>
+      <td>Bloqueo en &lt; 1 segundo.</td>
+    </tr>
+    <tr>
+      <td>Disponibilidad</td>
+      <td>Mobile App</td>
+      <td>Reporte continuo de GPS</td>
+      <td>Proximity Service</td>
+      <td>Carga alta</td>
+      <td>El servicio debe procesar cada evento de geofencing para disparar la automatización.</td>
+      <td>99.9% de uptime del servicio.</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### 4.1.2.3.	Constraints.
 
