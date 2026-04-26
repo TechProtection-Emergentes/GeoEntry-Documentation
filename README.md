@@ -1062,13 +1062,82 @@ El **EventStorming** nos ayudó a visualizar el flujo completo de eventos, ident
 
 #### 4.2.2.	Candidate Context Discovery.
 
+<img src="assets/chapter4/GeoEntry - Candidate Context Discovery.jpg" alt="Candidate-Contexts">
+
+[Enlace al Candidate Context Discovery](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625561166020&cot=14)
+
 
 #### 4.2.3.	Domain Message Flows Modeling.
 
+<img src="assets/chapter4/GeoEntry - Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling">
+
+[Enlace al Domain Message Flows Modeling](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625658175134&cot=14)
 
 #### 4.2.4.	Bounded Context Canvases.
 
+<img src="assets/chapter4/GeoEntry - Bounded Context Canvases.jpg" alt="Bounded Context Canvases">
+
+[Enlace al Bounded Context Canvases](https://miro.com/app/board/uXjVHcJsCQs=/?moveToWidget=3458764625663746924&cot=14)
+
 #### 4.2.5.	Context Mapping.
+
+En esta sección se detalla el mapa de relaciones entre los seis Bounded Contexts que componen el ecosistema de GeoEntry. Tras el proceso de Candidate Context Discovery, el equipo evaluó la mejor forma de integrar estos dominios para garantizar que la automatización sea fluida pero, sobre todo, segura.
+
+**Definición de Relaciones Estructurales**
+
+Para definir el mapa, el equipo discutió alternativas clave como:
+
+* **Aislamiento de Seguridad**: Se decidió que el Security Context sea el más restrictivo, actuando como un "Downstream" protegido de las decisiones probabilísticas del IA Context.
+* **Centralización de Notificaciones**: En lugar de que cada servicio envíe alertas por su cuenta, se creó el Notification Context como un servicio especializado para desacoplar la lógica de mensajería del negocio central.
+
+<table class="context-mapping-table">
+  <thead>
+    <tr>
+      <th>Origen (Upstream)</th>
+      <th>Destino (Downstream)</th>
+      <th>Patrón de Relación</th>
+      <th>Justificación Técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>User Context</td>
+      <td>Todos los Contextos</td>
+      <td>Conformist</td>
+      <td>El contexto de usuario provee la identidad y roles. Los demás servicios se "conforman" al formato del JWT para validar permisos.</td>
+    </tr>
+    <tr>
+      <td>Proximity Context</td>
+      <td>Security / Device</td>
+      <td>Customer/Supplier</td>
+      <td>Proximity detecta el geofencing (Proveedor) y Security/Device reaccionan (Clientes). Existe una alta coordinación para evitar falsos positivos.</td>
+    </tr>
+    <tr>
+      <td>IA Context</td>
+      <td>Device Context</td>
+      <td>Upstream/Downstream (ACL)</td>
+      <td>La IA entrega predicciones complejas. El Device Context usa una ACL (Anti-corruption Layer) para validar que la sugerencia sea un comando físico válido.</td>
+    </tr>
+    <tr>
+      <td>Device Context</td>
+      <td>Notification Context</td>
+      <td>Customer/Supplier</td>
+      <td>Cuando un dispositivo cambia de estado, el Notification Context "abastece" la alerta al usuario para confirmar la acción.</td>
+    </tr>
+    <tr>
+      <td>Security Context</td>
+      <td>Notification Context</td>
+      <td>Customer/Supplier</td>
+      <td>Eventos críticos (cerradura abierta) disparan alertas prioritarias de forma inmediata.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Análisis de Decisiones de Diseño (Design Critique)**
+
+* **Shared Kernel (Supabase)**: Se utiliza Supabase como núcleo compartido únicamente para la sincronización de estados en tiempo real. Esto permite que el cambio de una luz (Device Context) se refleje instantáneamente en la interfaz de usuario sin pasar por orquestaciones complejas.
+* **Anti-corruption Layer (ACL) en IA**: Se implementó para proteger el hardware. Si el modelo local en Ollama generara una salida inesperada debido a una alucinación del modelo, la ACL en el Device Context filtra la petición, asegurando que solo comandos conocidos (ON/OFF, niveles de temperatura) lleguen al ESP32.
+* **Independencia del Safety Context (Security)**: Al separar Security de Device, nos aseguramos de que si el servidor de luces falla, la cerradura siga funcionando de forma independiente y segura, siguiendo el principio de diseño de "falla segura".
 
 ### 4.3.	Software Architecture.
 
