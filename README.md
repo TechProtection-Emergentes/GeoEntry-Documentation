@@ -555,8 +555,94 @@ Matriz de tareas
 |Seleccionar plataformas digitales para la gestión centralizada de dispositivos IoT|A veces|Media|A menudo|Alta|
 |Analizar aspectos de privacidad y seguridad de datos en sistemas inteligentes|A veces|Alta|A menudo|Alta|
 |Personalizar configuraciones automáticas según hábitos y patrones de uso detectados|A menudo|Alta|A veces|Media|
+<br>
+
+#### Análisis de Tareas
+
+A partir del análisis de la matriz de tareas, se identifica que tanto los usuarios residenciales con hogares inteligentes como los negocios interesados en experiencias de bienvenida automatizadas coinciden en la relevancia de actividades vinculadas a la automatización, la integración tecnológica y la personalización basada en el comportamiento del usuario. Estas coincidencias evidencian un contexto favorable para la implementación de una solución como GeoEntry, la cual integra IoT e Inteligencia Artificial para optimizar dichos procesos de manera autónoma.
+
+#### Tareas de alta frecuencia e importancia para usuarios residenciales
+
+- Configurar automatizaciones para la llegada en función de la proximidad:
+    Constituye una necesidad prioritaria, ya que los usuarios buscan eliminar la intervención manual en acciones como el acceso, iluminación y climatización, favoreciendo una experiencia automatizada desde el ingreso al hogar.
+- Supervisar la seguridad mediante dispositivos inteligentes conectados:
+    La posibilidad de monitoreo remoto y control en tiempo real representa un factor clave, especialmente cuando se integra con sistemas automatizados de acceso.
+- Personalizar configuraciones según hábitos y rutinas:
+    Los usuarios valoran sistemas capaces de adaptarse dinámicamente a sus patrones de comportamiento, lo cual se alinea directamente con el uso de Inteligencia Artificial para aprendizaje y predicción.
+- Evaluar costos de inversión en soluciones de automatización:
+    Existe una alta preocupación por la relación costo-beneficio, priorizando soluciones escalables, eficientes y de fácil implementación.
+
+#### Tareas de alta frecuencia e importancia para negocios
+
+- Optimizar el proceso de llegada y registro de clientes mediante automatización:
+    La automatización del ingreso y la reducción de fricciones impactan directamente en la percepción del servicio y la eficiencia operativa.
+- Configurar preferencias personalizadas en experiencias automatizadas:
+    Los negocios buscan ofrecer entornos adaptados a perfiles de clientes, lo que implica sistemas capaces de reconocer patrones y ajustar condiciones automáticamente.
+- Implementar soluciones de detección automática de presencia:
+    La identificación del usuario en tiempo real permite activar procesos automatizados, mejorando la fluidez en la gestión de espacios y servicios.
+- Evaluar la compatibilidad e integración con sistemas existentes:
+    La necesidad de interoperabilidad entre dispositivos y plataformas es crítica para evitar la fragmentación tecnológica y asegurar un funcionamiento eficiente.
+
+<br>
+
+La coincidencia entre ambos segmentos radica en la necesidad de una automatización inteligente y sin fricciones, donde la tecnología se adapta al usuario mediante el reconocimiento de presencia y el aprendizaje de hábitos, en lugar de requerir interacción constante. En este contexto, aspectos como la integración de dispositivos IoT, la seguridad de la información y la personalización de la experiencia se consolidan como factores determinantes.<br>
+Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la demanda de soluciones que combinen automatización basada en proximidad con capacidades de Inteligencia Artificial, permitiendo una gestión eficiente, predictiva y adaptativa tanto en entornos residenciales como comerciales.
 
 ### 2.3.3 Empathy Mapping
+
+#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+
+| **¿Qué Piensa y Siente?** | **¿Qué ve?** |
+|---|---|
+|Busca un entorno doméstico que se adapte automáticamente a su presencia sin intervención manual.|Observa que muchas soluciones de domótica requieren múltiples aplicaciones y configuraciones complejas.|
+|Se siente frustrado por la falta de interoperabilidad entre dispositivos de distintas marcas.|Identifica limitaciones en la integración de dispositivos dentro de un mismo ecosistema.|
+|Tiene preocupaciones sobre privacidad de datos y obsolescencia tecnológica.|Percibe nuevas soluciones tecnológicas, pero duda de su valor diferencial real.|
+|Prioriza la comodidad y la eficiencia energética como beneficios clave.|Encuentra opiniones de usuarios con problemas similares en foros y redes sociales.|
+
+<br>
+
+| **¿Qué Dice y Hace?** | **¿Qué oye?** |
+|---|---|
+|Expresa la necesidad de automatización intuitiva y sin configuraciones complejas.|Escucha opiniones mixtas sobre la efectividad de los sistemas inteligentes actuales.|
+|Busca centralizar el control de dispositivos en una sola plataforma.|Oye sobre nuevas tecnologías, pero percibe barreras en instalación y configuración.|
+|Desea eliminar acciones manuales como uso de llaves o activación de dispositivos.|Recibe información sobre soluciones automatizadas con valoraciones inconsistentes.|
+|Explora alternativas de automatización basadas en presencia.|Escucha experiencias negativas relacionadas con integración y usabilidad.|
+
+<br>
+
+| **Dolores** | **Ganancias** |
+|---|---|
+|Fragmentación de aplicaciones y falta de integración entre dispositivos IoT.|Contar con un sistema unificado que integre dispositivos de manera transparente.|
+|Dificultad para adaptar automatizaciones a rutinas variables.|Disponer de automatización basada en proximidad y hábitos sin intervención manual.|
+|Preocupaciones sobre privacidad, seguridad y obsolescencia.|Acceder a una solución escalable compatible con su ecosistema actual.|
+
+<br>
+
+#### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
+
+| **¿Qué Piensa y Siente?** | **¿Qué ve?** |
+|---|---|
+|Busca mejorar la experiencia de llegada mediante automatización y personalización.|Observa que la competencia adopta tecnologías para optimizar la experiencia del cliente.|
+|Prioriza la seguridad y el monitoreo en la adopción tecnológica.|Identifica limitaciones en la integración de soluciones con sistemas existentes.|
+|Se preocupa por la continuidad operativa ante fallas técnicas.|Percibe que muchas soluciones requieren inversiones elevadas para funcionar correctamente.|
+|Necesita integración con sistemas de gestión y reservas.|Detecta que las soluciones no siempre se adaptan a necesidades específicas del negocio.|
+
+<br>
+
+| **¿Qué Dice y Hace?** | **¿Qué oye?** |
+|---|---|
+|Destaca la importancia de una experiencia de ingreso fluida y sin fricciones.|Escucha quejas de clientes sobre tiempos de espera y procesos ineficientes.|
+|Investiga tecnologías de reconocimiento automático de clientes.|Oye sobre sistemas automatizados con limitaciones de integración.|
+|Evalúa soluciones que integren automatización con gestión del negocio.|Recibe recomendaciones que no siempre cumplen estándares de seguridad.|
+|Expresa preocupación por la seguridad de la información.|Escucha sobre riesgos asociados a sistemas poco confiables.|
+
+<br>
+
+| **Dolores** | **Ganancias** |
+|---|---|
+|Falta de integración entre sistemas de gestión y automatización.|Automatizar el reconocimiento de clientes y sus preferencias.|
+|Inconsistencia en la experiencia del cliente por dependencia del personal.|Ofrecer una experiencia homogénea, eficiente y personalizada.|
+|Riesgos en seguridad informática y protección de datos.|Contar con una solución robusta, integrada y confiable.|
 
 ### 2.3.4 As-is Scenario Mapping
 
