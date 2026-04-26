@@ -1036,6 +1036,19 @@ Tras la finalización del Quality Attribute Workshop, el equipo de arquitectura 
   </tbody>
 </table>
 
+Para este refinamiento, se ha integrado formalmente la lógica de inferencia para la toma de decisiones del **AI Service**:
+
+$$P(Device_{on} | Context) = \sigma(W_{time} \cdot T + W_{history} \cdot H + W_{proximity} \cdot P)$$
+
+**Leyenda:**
+
+* **$P(Device_{on} | Context)$**: Es la Probabilidad de Encendido. Representa qué tan seguro está el sistema de que debe encender un dispositivo específico (como el AC o la cafetera) dado el contexto actual.
+* **$\sigma$ (Sigma)**: Es la Función Sigmoide. Su trabajo es "aplastar" cualquier número que salga de la suma y convertirlo en un valor entre 0 y 1 (donde 1 es 100% de probabilidad).
+* **$T$ (Time)**: El factor Tiempo. Representa la hora actual. No es lo mismo llegar a casa a las 2 PM (necesitas aire acondicionado) que a las 8 AM (necesitas la cafetera).
+* **$H$ (History)**: El factor Historial. Son tus hábitos acumulados que el servicio analiza cada noche en el modo batch. Si el 90% de los lunes enciendes la TV al llegar, este valor será muy alto ese día.
+* **$P$ (Proximity)**: El factor Proximidad. Indica qué tan cerca estás del hogar según el geofencing de la app. Ayuda a decidir si la acción debe ser inmediata o puede esperar un poco.
+* **$W$ ($W_{time}, W_{history}, W_{proximity}$)**: Son los Pesos (Weights). Es lo que la IA realmente "aprende". Si el sistema nota que tus hábitos cambian según la hora pero no según tu ubicación, le dará más "peso" a $W_{time}$ que a $W_{proximity}$.
+
 ### 4.2.	Strategic-Level Domain-Driven Design.
 
 #### 4.2.1.	EventStorming.
