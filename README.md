@@ -899,6 +899,143 @@ Priorización de los factores que más impactan en la complejidad técnica.
 
 #### 4.1.5.	Quality Attribute Scenario Refinements.
 
+Tras la finalización del Quality Attribute Workshop, el equipo de arquitectura determinó que la privacidad de los datos de comportamiento y la latencia en la respuesta física son los pilares críticos de la solución. Se decidió implementar Ollama en Docker para garantizar que el 100% de la inferencia de IA sea local y utilizar comunicación gRPC entre microservicios para minimizar los tiempos de respuesta en eventos de geofencing.
+
+**Scenario Refinement for Scenario 1: Privacidad y Confidencialidad**
+
+<table class="scenario-1-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Generación de patrones de hábitos del usuario sin exposición a nubes externas.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Garantizar la privacidad total del hogar para generar confianza en el usuario residencial.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Confidencialidad, Privacidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Hábitos diarios del usuario (iluminación, clima).</li>
+          <li><strong>Stimulus:</strong> Análisis del historial para predicción de estados.</li>
+          <li><strong>Environment:</strong> Operación normal del sistema (Modo Batch nocturno).</li>
+          <li><strong>Artifact:</strong> AI Service operando con Ollama Engine.</li>
+          <li><strong>Response:</strong> El procesamiento se realiza exclusivamente en el contenedor local de Railway.</li>
+          <li><strong>Response Measure:</strong> 0% de datos personales o patrones de conducta son enviados a APIs externas.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿El hardware de Railway soporta la carga del modelo LLM local?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>La latencia inicial de carga del modelo en el contenedor.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Scenario Refinement for Scenario 2: Seguridad Física (Acceso)**
+
+<table class="scenario-2-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Aseguramiento inmediato del hogar al detectar la salida del usuario.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Ofrecer una solución de seguridad robusta y autónoma.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Seguridad (Integridad), Fiabilidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Mobile App (GPS/Geofencing).</li>
+          <li><strong>Stimulus:</strong> Evento users.left (usuario fuera del rango de casa).</li>
+          <li><strong>Environment:</strong> Operación normal.</li>
+          <li><strong>Artifact:</strong> Security Service (Lógica aislada).</li>
+          <li><strong>Response:</strong> Bloqueo de cerradura física y restricción de controles manuales en apps.</li>
+          <li><strong>Response Measure:</strong> El bloqueo debe completarse en menos de 1 segundo tras la recepción del evento.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿Qué sucede si el ESP32 pierde conexión a internet al momento de la salida?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>Necesidad de un mecanismo de fallback local (Bluetooth) para emergencias.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Scenario Refinement for Scenario 3: Disponibilidad y Rendimiento (Trigger)**
+
+<table class="scenario-3-section">
+  <thead>
+    <tr>
+      <th colspan="2">Scenario Refinement for Scenario 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scenario(s):</strong></td>
+      <td>Activación de dispositivos por proximidad con latencia imperceptible.</td>
+    </tr>
+    <tr>
+      <td><strong>Business Goals:</strong></td>
+      <td>Proporcionar una experiencia de usuario fluida y reactiva.</td>
+    </tr>
+    <tr>
+      <td><strong>Relevant Quality Attributes:</strong></td>
+      <td>Disponibilidad, Rendimiento.</td>
+    </tr>
+    <tr>
+      <td><strong>Scenario Components:</strong></td>
+      <td>
+        <ul>
+          <li><strong>Stimulus Source:</strong> Mobile App reportando GPS continuamente.</li>
+          <li><strong>Stimulus:</strong> Detección de proximidad y reporte al REST API.</li>
+          <li><strong>Environment:</strong> Carga alta de peticiones (múltiples usuarios).</li>
+          <li><strong>Artifact:</strong> Proximity Service y Device Service.</li>
+          <li><strong>Response:</strong> Inferencia del AI Service y envío de comandos al ESP32 vía gRPC.</li>
+          <li><strong>Response Measure:</strong> Ejecución total de la automatización en &lt; 2 segundos desde el geofence.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Questions:</strong></td>
+      <td>¿Cómo afecta el modo de ahorro de energía del smartphone al geofencing?</td>
+    </tr>
+    <tr>
+      <td><strong>Issues:</strong></td>
+      <td>La precisión del GPS en interiores o zonas de baja cobertura.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### 4.2.	Strategic-Level Domain-Driven Design.
 
 #### 4.2.1.	EventStorming.
