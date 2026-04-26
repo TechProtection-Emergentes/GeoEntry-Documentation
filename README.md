@@ -706,11 +706,21 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 ### 3.1.	To-Be Scenario Mapping.
 
+Para realizar el To-be Scenario Mapping el equipo determinó como se vería el flujo de trabajo luego de que nuestra solución, GeoEntry, haya sido implementada para los segmentos objetivos.
+
+**Jovenes**
+
+<img src="assets/chapter3/jovenes.jpg"/>
+
+**Familias**
+
+<img src="assets/chapter3/familias.jpg"/>
+
 ### 3.2.	User Stories.
 
 #### Épicas
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>Epic / User Story ID</th>
@@ -1095,9 +1105,11 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 ### 3.3.	Impact Mapping.
 
+<img src="assets/chapter3/impactmapping.png"/>
+
 ### 3.4.	Product Backlog.
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>Orden</th>
