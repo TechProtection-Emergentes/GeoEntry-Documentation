@@ -1053,9 +1053,18 @@ $$P(Device_{on} | Context) = \sigma(W_{time} \cdot T + W_{history} \cdot H + W_{
 
 #### 4.2.1.	EventStorming.
 
+El **EventStorming** nos ayudó a visualizar el flujo completo de eventos, identificar los dominios clave y entender la lógica de negocio del sistema de manera colaborativa y visual.
+
+<img src="assets/chapter4/GeoEntry - EventStorming.jpg" alt="EventStorming">
+
+[Enlace al EventStorming](https://miro.com/app/board/uXjVHcJsCQs=/?share_link_id=983372844497)
+
+
 #### 4.2.2.	Candidate Context Discovery.
 
+
 #### 4.2.3.	Domain Message Flows Modeling.
+
 
 #### 4.2.4.	Bounded Context Canvases.
 
