@@ -26,11 +26,11 @@
 
 | Integrante                              | Código       |
 |-----------------------------------------|--------------|
-| xxxx          |  xxxxxx  |
-|  xxxxxx       |  xxxxxxx |
-|   x           | xxxxxx   |
-| Vera Nuñez Nicolas Alejandro            | U202214869   |
-|  xxxxxxxxxx   |  xxxxx  |
+| Agama Espinoza, Eric Fabrizio       |  U202213358  |
+|  López Huamán, Rodrigo Adrián        |  U202212338  |
+|   Salon Puerta, Merly            | U20201b772   |
+| Vera Nuñez, Nicolas Alejandro            | U202214869   |
+|  Salvador Rodríguez, Rodrigo Jesús   |  U202213646   |
 
 <div align="center"><h3>Abril 2026</h3></div><br>
 
@@ -39,6 +39,47 @@
 ---
 
 ### Registro de Versiones
+
+<section class="version-section">
+  <h2>Historial de Versiones</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Versión</th>
+        <th>Fecha</th>
+        <th>Autor</th>
+        <th>Descripción de la modificación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.1</td>
+        <td>18/04/2026</td>
+        <td>TechProtection</td>
+        <td>Capítulo I</td>
+      </tr>
+      <tr>
+        <td>1.2</td>
+        <td>19/04/2026</td>
+        <td>TechProtection</td>
+        <td>Capítulo II</td>
+      </tr>
+      <tr>
+        <td>1.3</td>
+        <td>22/04/2026</td>
+        <td>TechProtection</td>
+        <td>Capítulo III</td>
+      </tr>
+      <tr>
+        <td>1.4</td>
+        <td>24/04/2026</td>
+        <td>TechProtection</td>
+        <td>Capítulo IV</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
 ### Report Collaboration Insights
 
