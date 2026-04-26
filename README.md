@@ -646,6 +646,14 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 ### 2.3.4 As-is Scenario Mapping
 
+#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+
+<img src="assets/asIs1.png"/>
+
+#### Segmento 2: Negocios con Experiencia de Bienvenida Automatizada
+
+<img src="assets/asIs2.png"/>
+
 ## 2.4 Ubiquitous Language
 
 
