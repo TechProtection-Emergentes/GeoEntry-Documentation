@@ -656,9 +656,26 @@ Estos hallazgos validan la propuesta de valor de GeoEntry, al evidenciar la dema
 
 ## 2.4 Ubiquitous Language
 
+**Ubiquitous Language – GeoEntry**
 
-
-
+| **Término** | **Definición** |
+|---|---|
+|GeoEntry|Sistema inteligente de automatización que integra tecnologías IoT e Inteligencia Artificial para gestionar accesos y ambientes de manera automática, basándose en la proximidad del usuario y el aprendizaje de sus hábitos.|
+|Hogar Inteligente|Entorno residencial equipado con dispositivos IoT interconectados que permiten automatizar funciones como iluminación, seguridad y climatización, optimizados mediante detección de presencia y comportamiento del usuario.|
+|Automatización Inteligente|Proceso mediante el cual un sistema ejecuta acciones sin intervención humana, utilizando datos de proximidad, sensores y modelos de aprendizaje para anticipar necesidades del usuario.|
+|IoT (Internet of Things)|Red de dispositivos físicos (sensores, actuadores, ESP32, cerraduras inteligentes, etc.) conectados entre sí y a internet, que permiten la recolección y ejecución de datos en tiempo real dentro del sistema GeoEntry.|
+|Inteligencia Artificial (IA)|Componente del sistema encargado de analizar patrones de comportamiento, horarios y preferencias del usuario para generar automatizaciones predictivas y personalizadas.|
+|Detección de Proximidad|Capacidad del sistema para identificar la ubicación o cercanía del usuario mediante sensores o dispositivos móviles, activando automáticamente funciones como apertura de puertas o encendido de dispositivos.|
+|Ecosistema IoT|Conjunto de dispositivos inteligentes interconectados que operan de forma integrada dentro de GeoEntry para ofrecer una experiencia automatizada y centralizada.|
+|Integración de Dispositivos|Capacidad del sistema para conectar y coordinar dispositivos de diferentes marcas y tecnologías en una única plataforma funcional, evitando la fragmentación.|
+|Control de Acceso Inteligente|Mecanismo automatizado que permite gestionar el ingreso de usuarios mediante reconocimiento de proximidad, credenciales digitales o patrones de comportamiento, sin necesidad de intervención manual.|
+|Experiencia Automatizada|Interacción del usuario con el entorno en la que los sistemas responden de forma autónoma a su presencia y hábitos, generando comodidad, eficiencia y personalización.|
+|Personalización Predictiva|Capacidad del sistema para anticipar necesidades del usuario basándose en datos históricos, ajustando automáticamente variables como iluminación, temperatura o acceso.|
+|Seguridad Inteligente|Conjunto de mecanismos que protegen tanto el acceso físico como los datos del sistema, incluyendo autenticación, cifrado y monitoreo en tiempo real dentro del ecosistema GeoEntry.|
+|Interfaz de Gestión|Plataforma digital (app o dashboard) que permite al usuario visualizar, configurar y supervisar el comportamiento del sistema, incluyendo automatizaciones y datos recolectados.|
+|Eficiencia Energética|Optimización del consumo de recursos mediante la activación inteligente de dispositivos solo cuando es necesario, basada en la presencia y hábitos del usuario.|
+|Escalabilidad del Sistema|Capacidad de GeoEntry para expandirse mediante la incorporación de nuevos dispositivos, funcionalidades o espacios, manteniendo un rendimiento óptimo.|
+|Interoperabilidad|Habilidad del sistema para funcionar de manera fluida con múltiples dispositivos, protocolos y plataformas externas, garantizando una experiencia integrada.|
 
 
 
