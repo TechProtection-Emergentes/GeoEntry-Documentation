@@ -132,49 +132,48 @@ Visión:
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <section class="team-section">
-  <h2>Miembros</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Miembros</th>
-        <th>Código estudiante</th>
-        <th>Carrera</th>
-        <th>Descripción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Eric Agama Espinoza</td>
-        <td>u202213358</td>
-        <td>Ingeniería de Software</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Merly Salon Puerta</td>
-        <td>u20201b772</td>
-        <td>Ingeniería de Software</td>
-        <td>
-          Mi nombre es Merly Salon, estudiante de Ingeniería de Software. Me considero una persona entusiasta.
-          Pienso que todo lo que nos proponemos, se puede lograr con esfuerzo, constancia y disciplina.
-          Lo que más me gusta de la ingeniería de software es que puedes crear soluciones tecnológicas
-          que impacten positivamente en la sociedad.
-        </td>
-      </tr>
-      <tr>
-        <td>Nicolas Alejandro Vera Nuñez</td>
-        <td>u202214869</td>
-        <td>Ingeniería de Software</td>
-        <td>
-          Mi nombre es Nicolas Vera, estudiante de Ingeniería de Software, tengo 22 años y me considero
-          una persona disciplinada y enfocada en alcanzar mis objetivos. En el área de Ingeniería de Software,
-          me interesa el desarrollo de aplicaciones, el diseño de soluciones tecnológicas y el aprendizaje
-          continuo de nuevas herramientas y metodologías, lo que me permite fortalecer mis habilidades y
-          crecer profesionalmente en este campo.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+  <thead>
+    <tr>
+      <th>Miembros</th>
+      <th>Código estudiante</th>
+      <th>Carrera</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agama Espinoza, Eric Fabricio</td>
+      <td>u202213358</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy Eric Agama, estudiante de Ingeniería de Software. Me caracterizo por ser responsable y comprometido en mis trabajos, y siempre busco optimizar la organización dentro del equipo. Tengo experiencia con el lenguaje Luau en Roblox Studio.</td>
+    </tr>
+    <tr>
+      <td>López Huamán, Rodrigo Adrián</td>
+      <td>U202212338</td>
+      <td>Ingeniería de Software</td>
+      <td>Mi nombre es Rodrigo Adrián López Huamán, estudiante de noveno ciclo de Ingeniería de Software, tengo 20 años y me considero un chico responsable y comprometido con mis actividades. Además, de ser una persona creativa y capaz de trabajar en equipo para alcanzar nuestras metas. También tengo habilidades en el manejo de conflictos, lo que me permite resolver situaciones difíciles de manera efectiva. Estoy emocionado de seguir aprendiendo y creciendo en esta carrera.</td>
+    </tr>
+    <tr>
+      <td>Salvador Rodríguez, Rodrigo Jesús</td>
+      <td>U202213646</td>
+      <td>Ingeniería de Software</td>
+      <td>Mi nombre es Rodrigo Jesus Salvador Rodriguez, tengo 20 años, estudio la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Me considero una persona responsable y puntual en todo tipo de aspectos, esto lo voy a ver reflejado en este proyecto, como miembro de este equipo me comprometo a seguir las indicaciones al pie de la letra, seguir recomendaciones y apoyar siempre a mis compañeros para presentar el mejor proyecto grupal.</td>
+    </tr>
+    <tr>
+      <td>Salon Puerta, Merly</td>
+      <td>u20201b772</td>
+      <td>Ingeniería de Software</td>
+      <td>Mi nombre es Merly Salon, estudiante de Ingeniería de Software. Me considero una persona entusiasta. Pienso que todo lo que nos proponemos, se puede lograr con esfuerzo, constancia y disciplina. Lo que más me gusta de la ingeniería de software es que puedes crear soluciones tecnológicas que impacten positivamente en la sociedad.</td>
+    </tr>
+    <tr>
+      <td>Nicolas Alejandro Vera Nuñez</td>
+      <td>u202214869</td>
+      <td>Ingeniería de Software</td>
+      <td>Mi nombre es Nicolas Vera, estudiante de Ingeniería de Software, tengo 22 años y me considero una persona disciplinada y enfocada en alcanzar mis objetivos. En el área de Ingeniería de Software, me interesa el desarrollo de aplicaciones, el diseño de soluciones tecnológicas y el aprendizaje continuo de nuevas herramientas y metodologías, lo que me permite fortalecer mis habilidades y crecer profesionalmente en este campo.</td>
+    </tr>
+  </tbody>
+</table>
 </section>
 
 ### 1.2. Solution Profile
