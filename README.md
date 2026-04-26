@@ -536,6 +536,26 @@ Estas entrevistas tienen como finalidad explorar cómo los negocios perciben la 
 
 ### 2.3.2 User Task Matrix
 
+En esta sección se presenta la User Task Matrix, en la cual se analizan las actividades realizadas por los segmentos identificados: usuarios residenciales con hogares inteligentes y negocios interesados en implementar experiencias de bienvenida automatizadas. El objetivo de esta matriz es comprender cómo dichas actividades se relacionan con el uso potencial de una solución como GeoEntry, la cual integra tecnologías IoT e Inteligencia Artificial para automatizar procesos en función de la presencia y los patrones de comportamiento del usuario.
+<br>
+A través de esta herramienta, se identifican las tareas clave, así como su frecuencia e importancia para cada User Persona, lo que permite reconocer oportunidades donde GeoEntry puede optimizar la experiencia mediante automatización inteligente, integración de dispositivos y personalización de entornos.<br>
+
+Matriz de tareas
+| Tarea | Alejandro (Frecuencia) | Alejandro (Importancia) | José (Frecuencia) | José (Importancia) |
+| ------ | ------ | ------ | ------ | ------ |  
+| Configurar automatizaciones para llegada en función de la proximidad del usuario | A menudo | Alta | A menudo | Alta |
+| Ajustar dispositivos inteligentes para optimizar confort y eficiencia energética de forma automatizada | A menudo | Alta | A veces | Media |
+| Integrar dispositivos IoT de diferentes marcas en un sistema unificado | A veces | Alta | A menudo | Alta |
+| Supervisar la seguridad mediante sistemas inteligentes conectados | A menudo | Alta | A veces | Media |
+|Evaluar la compatibilidad de nuevos dispositivos con el ecosistema automatizado | A veces | Media | A menudo | Alta |
+|Configurar preferencias personalizadas en experiencias automatizadas (usuarios o clientes)|Nunca|Baja|A menudo|Alta|
+|Optimizar procesos de ingreso mediante automatización y detección de presencia|Nunca|Baja|A menudo|Alta|
+|Implementar soluciones de detección automática de presencia basadas en ubicación|A veces|Alta|A menudo|Alta|
+|Evaluar costos asociados a la implementación de soluciones de automatización inteligente|A menudo|Alta|A menudo|Alta|
+|Seleccionar plataformas digitales para la gestión centralizada de dispositivos IoT|A veces|Media|A menudo|Alta|
+|Analizar aspectos de privacidad y seguridad de datos en sistemas inteligentes|A veces|Alta|A menudo|Alta|
+|Personalizar configuraciones automáticas según hábitos y patrones de uso detectados|A menudo|Alta|A veces|Media|
+
 ### 2.3.3 Empathy Mapping
 
 ### 2.3.4 As-is Scenario Mapping
