@@ -301,18 +301,48 @@ Visión:
 
 #### 1.2.1 Antecedentes y problemática
 
-En la actualidad, el crecimiento de los hogares inteligentes ha generado un incremento en el uso de dispositivos conectados como luces, cerraduras electrónicas, sensores y sistemas de climatización. Sin embargo, a pesar de estos avances tecnológicos, persisten problemas importantes que limitan su adopción y efectividad.
-Uno de los principales problemas es la fragmentación del ecosistema, donde los dispositivos funcionan de manera independiente y requieren múltiples aplicaciones para su control. Esto genera una experiencia poco fluida y aumenta la complejidad para el usuario.
-Además, los sistemas actuales dependen en gran medida de la interacción manual, ya sea mediante aplicaciones móviles o comandos de voz, lo que reduce la comodidad y eficiencia que debería caracterizar a un hogar inteligente.
-Otro problema relevante es la falta de inteligencia adaptativa, ya que la mayoría de los sistemas no aprenden del comportamiento del usuario ni anticipan sus necesidades, limitándose a ejecutar acciones preconfiguradas.
+**1.2.1.1. What/Qué**
+¿Cuál es el problema?
+En la actualidad, muchas personas no cuentan con un sistema automatizado que les permita disfrutar de una experiencia cómoda, segura y eficiente al llegar a sus hogares. La falta de integración entre dispositivos inteligentes y la ausencia de activación automática basada en geolocalización provocan que los usuarios deban interactuar manualmente con múltiples sistemas (cerraduras, luces, temperatura, fragancias), lo cual disminuye la comodidad y afecta la eficiencia energética del hogar.
 
-Como consecuencia, los usuarios enfrentan:
-- Procesos repetitivos y poco eficientes
-- Falta de personalización real
-- Bajo aprovechamiento del potencial de automatización
-- Consumo energético innecesario
+**1.2.1.2. Why/Por qué**
+¿Cuál es la causa del problema?
+La causa principal radica en la fragmentación del ecosistema de dispositivos inteligentes y en la falta de soluciones que utilicen geolocalización en tiempo real para activar funciones del hogar. A esto se suma que muchas personas desconocen el potencial de automatización contextual y continúan usando métodos manuales poco eficientes.
 
-Frente a este contexto, surge la necesidad de desarrollar una solución que no solo automatice tareas, sino que sea capaz de aprender, predecir y adaptarse al comportamiento del usuario, integrando múltiples dispositivos en un sistema único e inteligente.
+**1.2.1.3. Who/Quién**
+¿Quiénes están involucrados?
+Están involucrados instaladores de domótica, desarrolladores de viviendas inteligentes, y eventualmente, empresas del rubro inmobiliario que deseen incluir esta tecnología como valor agregado.
+
+¿Quién lo utilizará?
+Los usuarios principales del sistema son personas con estilo de vida activo, profesionales y familias que buscan mayor comodidad y eficiencia en la gestión de su hogar.
+
+
+**1.2.1.4. When/Cuándo**
+¿Cuándo sucede el problema?
+El problema se manifiesta especialmente en momentos en los que los usuarios llegan a casa cargados, con poco tiempo, o simplemente desean una bienvenida más personalizada. La falta de automatización inteligente obliga a realizar múltiples acciones manuales para adaptar el ambiente del hogar, lo cual resulta poco práctico en la rutina diaria.
+
+**1.2.1.5. Where/Dónde**
+¿A dónde se dirige?
+El problema surge principalmente en zonas urbanas y residenciales, especialmente a personas con interés en hogares inteligentes, tecnología y confort, ofreciendo una solución unificada que optimiza su estilo de vida.
+
+¿Dónde surge el problema?
+Este problema es común en este segmento del mercado, donde los usuarios ya cuentan con dispositivos inteligentes, pero carecen de una integración automatizada que funcione en función de la proximidad del usuario.
+
+**1.2.1.6. How/Cómo**
+¿Cómo se utilizará el producto?
+El usuario instalará la app de GeoEntry en su smartphone. Al detectar que el usuario se aproxima a su vivienda, el sistema activará automáticamente funciones configuradas previamente como el desbloqueo de la puerta, el encendido de luces, el ajuste del clima interior y la liberación de fragancias ambientales. Todo esto estará conectado a través de una red domótica y gestionado desde la app.
+
+¿Cómo lograremos la correcta integración del sistema?
+GeoEntry integrará sensores de luminicidad, cerraduras electrónicas, controladores de clima, aromatizadores y geolocalización mediante una interfaz intuitiva. Los dispositivos se conectarán vía Wi-Fi o Bluetooth, y se podrá configurar rutinas según las preferencias del usuario, todo respaldado por protocolos de seguridad digital.
+
+
+**1.2.1.7. How much/Cuánto**
+¿Cuál es la magnitud del problema?
+Según datos de Statista (2023), el mercado global de hogares inteligentes alcanzó los USD 126 mil millones en 2022, y se proyecta un crecimiento sostenido del 11% anual. En América Latina, el interés en soluciones de automatización sigue en aumento. GeoEntry se posiciona como una solución innovadora en un sector con gran potencial. Se estima que al menos un 30-40% de los hogares con acceso a internet y dispositivos inteligentes podrían beneficiarse con la propuesta de valor de GeoEntry en los próximos cinco años.
+
+¿Qué porcentaje del personal de la industria se verá beneficiado por el servicio?
+Se estima que entre un 45% y 65% del personal vinculado a la administración, seguridad y mantenimiento de viviendas unifamiliares y conjuntos residenciales podría beneficiarse del uso de GeoEntry.
+
 
 #### 1.2.2 Lean UX Process.
 
