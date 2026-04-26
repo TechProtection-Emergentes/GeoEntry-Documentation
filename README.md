@@ -892,6 +892,11 @@ Priorización de los factores que más impactan en la complejidad técnica.
 
 #### 4.1.4.	Architectural Design Decisions.
 
+* **Adopción de Microservicios:** Se decidió separar responsabilidades en servicios NestJS para escalabilidad y mantenimiento independiente.
+* **Motor de IA Local (Ollama):** Se descartaron APIs de nube para garantizar la privacidad y reducir costos operativos.
+* **Estrategia de Persistencia:** Uso de Supabase para aprovechar PostgreSQL y capacidades de tiempo real para la Web App.
+
+
 #### 4.1.5.	Quality Attribute Scenario Refinements.
 
 ### 4.2.	Strategic-Level Domain-Driven Design.
