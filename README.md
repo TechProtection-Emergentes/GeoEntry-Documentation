@@ -479,6 +479,50 @@ A continuación se presentan los resúmenes de las entrevistas realizadas a repr
 
 ### 2.2.3 Análisis de entrevistas
 
+Tras analizar las entrevistas realizadas, se identifican los siguientes patrones y conclusiones relevantes para cada segmento:
+
+#### Segmento 1: Hogares inteligentes (usuarios residenciales)
+#### Patrones identificados:
+1. Fragmentación como dolor principal: Los tres entrevistados mencionan la fragmentación de los sistemas y la multiplicidad de aplicaciones como una frustración importante.
+2. Deseo de automatización basada en presencia: Existe un claro deseo de que el sistema reconozca automáticamente su llegada sin necesidad de comandos o aplicaciones.
+3. Preocupación por complejidad: Independientemente del nivel de experiencia con tecnología, todos expresan preocupación por la complejidad de instalación y configuración.
+4. Compatibilidad con dispositivos existentes: Valoran soluciones que se integren con los dispositivos que ya poseen, evitando reemplazar sistemas completos.
+5. Escalabilidad deseada: Prefieren sistemas que permitan comenzar con funcionalidades básicas y expandirse gradualmente.
+
+<br>
+
+#### Necesidades prioritarias:
+  - Solución integrada que reduzca la fragmentación de aplicaciones
+  - Detección automática de presencia que active configuraciones personalizadas
+  - Instalación y configuración sencilla, idealmente sin conocimientos técnicos avanzados
+  - Buena relación calidad-precio con opción de expansión modular
+
+**Rangos de inversión**: Entre $300-1000 dependiendo del nivel de adopción previo de tecnología y complejidad de la solución.
+
+#### Propósito de Entrevistas (Segmento 1):
+El propósito de estas entrevistas es comprender en profundidad las rutinas, frustraciones y expectativas de los usuarios residenciales que ya interactúan con tecnología inteligente en sus hogares. Buscamos identificar qué aspectos de su experiencia de llegada a casa podrían mejorarse mediante automatización, qué tipo de soluciones les resultan atractivas, qué barreras perciben para adoptar nuevas tecnologías y cuál es su disposición a invertir en sistemas que mejoren su comodidad y seguridad. Además, deseamos explorar cómo priorizan elementos como la privacidad, el control, la personalización y la compatibilidad entre dispositivos, ya que estos factores influyen directamente en su confianza hacia nuevas soluciones tecnológicas. Con esta información, podremos definir de forma más precisa las características mínimas necesarias para una propuesta de valor efectiva, segmentar a los usuarios según sus hábitos y preferencias, y anticipar posibles objeciones en el proceso de adopción. También se busca detectar patrones en las decisiones de compra y evaluar la aceptación de sistemas basados en geolocalización o automatización contextual.<br>
+
+#### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
+#### Patrones identificados:
+1. Personalización como diferenciador: Los tres negocios ven la experiencia personalizada como un importante diferenciador en mercados competitivos.
+2. Transiciones fluidas: Buscan eliminar fricciones en los momentos de llegada, registro o cambio de actividad.
+3. Integración con sistemas existentes: Todos cuentan con sistemas digitales parciales que desean integrar en una solución coherente.
+4. Valor del análisis de datos: Muestran interés en obtener datos sobre patrones de uso para optimizar sus operaciones.
+5. Necesidad de control flexible: Requieren equilibrio entre automatización y capacidad de ajuste manual según circunstancias variables.
+
+#### Necesidades prioritarias:
+  - Reconocimiento automático de clientes/miembros con activación de preferencias personalizadas
+  - Integración con sistemas de gestión y reservas existentes
+  - Interfaz simple para configuración por personal no técnico
+  - Capacidades analíticas para optimizar operaciones
+  - Escalabilidad según el tamaño y crecimiento del negocio
+
+**Rangos de inversión**: Entre $3,000-15,000 dependiendo del tamaño del negocio, la complejidad de la integración con sistemas existentes y el nivel de personalización deseado. Negocios más grandes o con alto flujo de clientes están dispuestos a invertir más si la solución ofrece beneficios claros en eficiencia operativa y experiencia del usuario.
+
+#### Propósito de Entrevistas (Segmento 2):
+
+Estas entrevistas tienen como finalidad explorar cómo los negocios perciben la importancia de la primera impresión al recibir a sus clientes o empleados, y qué limitaciones enfrentan actualmente para ofrecer una experiencia de entrada fluida y memorable. Se busca entender el valor que le asignan a la automatización en este contexto, qué nivel de personalización requieren, cuáles son sus expectativas en cuanto al retorno de inversión, y qué factores influirían en su decisión de implementar una solución tecnológica. También nos interesa conocer los tipos de negocios más receptivos a este tipo de soluciones, la frecuencia de interacción con sus visitantes, y los puntos críticos donde la automatización podría generar mayor impacto. A partir de esto, podremos determinar cuáles son los casos de uso más relevantes, identificar requisitos funcionales comunes entre negocios y diseñar propuestas flexibles que puedan adaptarse a distintos tamaños, rubros y horarios de operación. Asimismo, evaluaremos la disposición de los negocios a invertir recursos humanos y financieros en mantener este tipo de tecnologías operativas.
+
 ## 2.3 Needfinding
 ### 2.3.1 User Personas
 
