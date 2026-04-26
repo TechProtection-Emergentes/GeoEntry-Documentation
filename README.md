@@ -526,6 +526,14 @@ Estas entrevistas tienen como finalidad explorar cómo los negocios perciben la 
 ## 2.3 Needfinding
 ### 2.3.1 User Personas
 
+#### Segmento 1: Usuarios Residenciales de Hogares Inteligentes
+
+<img src="assets/userPersona1.png"/>
+
+#### Segmento 2: Negocios que buscan experiencias de bienvenida automatizadas
+
+<img src="assets/userPersona2.png"/>
+
 ### 2.3.2 User Task Matrix
 
 ### 2.3.3 Empathy Mapping
